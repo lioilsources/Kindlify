@@ -1,0 +1,25 @@
+{
+  "@@locale": "cs",
+  "appTitle": "Kindlify",
+  "navNoSections": "Žádná sekce neobsahuje všechna vybraná slova",
+  "navClearFilters": "Zrušit filtry",
+  "cloudMoreWords": "+{count} dalších",
+  "@cloudMoreWords": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "cloudSearchHint": "Hledat termíny...",
+  "summaryAiBadge": "AI · živě",
+  "summaryOfflineFallback": "Server není dostupný – zobrazuji předem vypočtený souhrn",
+  "libraryTitle": "Knihovna",
+  "libraryEmpty": "Žádné knihy",
+  "libraryLoadDemo": "Načíst ukázkovou knihu",
+  "libraryLoading": "Načítám knihu…",
+  "settingsTitle": "Nastavení",
+  "settingsServerUrl": "URL serveru",
+  "settingsLocale": "Jazyk",
+  "settingsLocaleCs": "Čeština",
+  "settingsLocaleEn": "Angličtina",
+  "readerZoomOutHint": "Přiblíž pro zoom-out"
+}

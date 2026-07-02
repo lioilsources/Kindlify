@@ -1,0 +1,25 @@
+{
+  "@@locale": "en",
+  "appTitle": "Kindlify",
+  "navNoSections": "No sections match all selected words",
+  "navClearFilters": "Clear filters",
+  "cloudMoreWords": "+{count} more",
+  "@cloudMoreWords": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "cloudSearchHint": "Search terms...",
+  "summaryAiBadge": "AI · live",
+  "summaryOfflineFallback": "Server unavailable — showing pre-computed summary",
+  "libraryTitle": "Library",
+  "libraryEmpty": "No books yet",
+  "libraryLoadDemo": "Load demo book",
+  "libraryLoading": "Loading book…",
+  "settingsTitle": "Settings",
+  "settingsServerUrl": "Server URL",
+  "settingsLocale": "Language",
+  "settingsLocaleCs": "Czech",
+  "settingsLocaleEn": "English",
+  "readerZoomOutHint": "Pinch to zoom out"
+}

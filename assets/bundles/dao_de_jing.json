@@ -1,0 +1,218 @@
+{
+  "manifest": {
+    "schemaVersion": "1.0",
+    "slug": "dao-de-jing",
+    "title": "Tao Te Ťing (道德經)",
+    "sourceLanguage": "zh",
+    "script": "han",
+    "pipelineVersion": "demo-1.0",
+    "generatedAt": "2026-05-24T00:00:00Z",
+    "tree": {
+      "id": "root",
+      "kind": "book",
+      "label": "Tao Te Ťing",
+      "byteStart": 0,
+      "byteEnd": 40000,
+      "children": [
+        {
+          "id": "section_tao",
+          "kind": "chapter",
+          "label": "道 Tao (1–37)",
+          "byteStart": 0,
+          "byteEnd": 20000,
+          "children": [
+            { "id": "ch_01", "kind": "section", "label": "Kap. 1 — Tao, které lze pojmenovat", "byteStart": 0, "byteEnd": 500, "children": [] },
+            { "id": "ch_02", "kind": "section", "label": "Kap. 2 — Bytí a nebytí", "byteStart": 500, "byteEnd": 1000, "children": [] },
+            { "id": "ch_03", "kind": "section", "label": "Kap. 3 — Nevládnutí touze", "byteStart": 1000, "byteEnd": 1500, "children": [] },
+            { "id": "ch_04", "kind": "section", "label": "Kap. 4 — Prázdnota Taa", "byteStart": 1500, "byteEnd": 2000, "children": [] },
+            { "id": "ch_05", "kind": "section", "label": "Kap. 5 — Nebe, Země a Tao", "byteStart": 2000, "byteEnd": 2500, "children": [] },
+            { "id": "ch_06", "kind": "section", "label": "Kap. 6 — Duch údolí", "byteStart": 2500, "byteEnd": 3000, "children": [] },
+            { "id": "ch_07", "kind": "section", "label": "Kap. 7 — Nebeská vytrvalost", "byteStart": 3000, "byteEnd": 3500, "children": [] },
+            { "id": "ch_08", "kind": "section", "label": "Kap. 8 — Nejvyšší dobro je jako voda", "byteStart": 3500, "byteEnd": 4000, "children": [] },
+            { "id": "ch_09", "kind": "section", "label": "Kap. 9 — Zdrženlivost", "byteStart": 4000, "byteEnd": 4500, "children": [] },
+            { "id": "ch_10", "kind": "section", "label": "Kap. 10 — Sjednocení duše", "byteStart": 4500, "byteEnd": 5000, "children": [] },
+            { "id": "ch_11", "kind": "section", "label": "Kap. 11 — Užitek prázdnoty", "byteStart": 5000, "byteEnd": 5500, "children": [] },
+            { "id": "ch_25", "kind": "section", "label": "Kap. 25 — Velké Tao", "byteStart": 11000, "byteEnd": 11500, "children": [] },
+            { "id": "ch_28", "kind": "section", "label": "Kap. 28 — Znát sílu, držet slabost", "byteStart": 12500, "byteEnd": 13000, "children": [] },
+            { "id": "ch_37", "kind": "section", "label": "Kap. 37 — Tao nejedná, přesto nic nezůstane neučiněno", "byteStart": 17000, "byteEnd": 17500, "children": [] }
+          ]
+        },
+        {
+          "id": "section_te",
+          "kind": "chapter",
+          "label": "德 Te (38–81)",
+          "byteStart": 20000,
+          "byteEnd": 40000,
+          "children": [
+            { "id": "ch_38", "kind": "section", "label": "Kap. 38 — Nejvyšší Te (ctnost)", "byteStart": 20000, "byteEnd": 20500, "children": [] },
+            { "id": "ch_40", "kind": "section", "label": "Kap. 40 — Návrat je pohyb Taa", "byteStart": 21000, "byteEnd": 21500, "children": [] },
+            { "id": "ch_41", "kind": "section", "label": "Kap. 41 — Tao, které vypadá hloupě", "byteStart": 21500, "byteEnd": 22000, "children": [] },
+            { "id": "ch_42", "kind": "section", "label": "Kap. 42 — Tao plodí jedničku", "byteStart": 22000, "byteEnd": 22500, "children": [] },
+            { "id": "ch_43", "kind": "section", "label": "Kap. 43 — Měkkost překoná tvrdost", "byteStart": 22500, "byteEnd": 23000, "children": [] },
+            { "id": "ch_48", "kind": "section", "label": "Kap. 48 — Studium přidává, Tao ubírá", "byteStart": 25000, "byteEnd": 25500, "children": [] },
+            { "id": "ch_55", "kind": "section", "label": "Kap. 55 — Plnost ctnosti", "byteStart": 28500, "byteEnd": 29000, "children": [] },
+            { "id": "ch_63", "kind": "section", "label": "Kap. 63 — Jednat bez jednání", "byteStart": 32500, "byteEnd": 33000, "children": [] },
+            { "id": "ch_66", "kind": "section", "label": "Kap. 66 — Moře přijímá všechny řeky", "byteStart": 34000, "byteEnd": 34500, "children": [] },
+            { "id": "ch_76", "kind": "section", "label": "Kap. 76 — Živé je měkké, mrtvé je tuhé", "byteStart": 38500, "byteEnd": 39000, "children": [] },
+            { "id": "ch_78", "kind": "section", "label": "Kap. 78 — Voda překoná kámen", "byteStart": 39000, "byteEnd": 39500, "children": [] },
+            { "id": "ch_81", "kind": "section", "label": "Kap. 81 — Pravdivá slova nejsou libozvučná", "byteStart": 39500, "byteEnd": 40000, "children": [] }
+          ]
+        }
+      ]
+    }
+  },
+  "words": {
+    "nodes": {
+      "root": {
+        "terms": [
+          { "term": "道 Tao", "score": 0.98, "count": 247, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.94, "count": 89, "kind": "phrase" },
+          { "term": "德 Te", "score": 0.91, "count": 134, "kind": "word" },
+          { "term": "自然 ziran", "score": 0.88, "count": 67, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.85, "count": 78, "kind": "entity" },
+          { "term": "水 voda", "score": 0.82, "count": 43, "kind": "word" },
+          { "term": "柔 měkkost", "score": 0.79, "count": 38, "kind": "word" },
+          { "term": "無 prázdnota", "score": 0.76, "count": 52, "kind": "word" },
+          { "term": "一 jednota", "score": 0.74, "count": 29, "kind": "word" },
+          { "term": "陰陽 yin-yang", "score": 0.71, "count": 24, "kind": "phrase" },
+          { "term": "天下 pod nebem", "score": 0.68, "count": 61, "kind": "phrase" },
+          { "term": "知 poznání", "score": 0.65, "count": 45, "kind": "word" },
+          { "term": "名 jméno", "score": 0.63, "count": 31, "kind": "word" },
+          { "term": "靜 klid", "score": 0.61, "count": 27, "kind": "word" },
+          { "term": "復 návrat", "score": 0.59, "count": 22, "kind": "word" }
+        ]
+      },
+      "section_tao": {
+        "terms": [
+          { "term": "道 Tao", "score": 0.99, "count": 140, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.93, "count": 52, "kind": "phrase" },
+          { "term": "無 prázdnota", "score": 0.87, "count": 38, "kind": "word" },
+          { "term": "名 jméno", "score": 0.81, "count": 28, "kind": "word" },
+          { "term": "自然 ziran", "score": 0.78, "count": 33, "kind": "word" },
+          { "term": "天地 nebe a země", "score": 0.75, "count": 24, "kind": "phrase" },
+          { "term": "谷 údolí", "score": 0.72, "count": 9, "kind": "word" },
+          { "term": "水 voda", "score": 0.69, "count": 19, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.66, "count": 41, "kind": "entity" },
+          { "term": "玄 tajemno", "score": 0.63, "count": 11, "kind": "word" }
+        ]
+      },
+      "section_te": {
+        "terms": [
+          { "term": "德 Te", "score": 0.97, "count": 98, "kind": "word" },
+          { "term": "道 Tao", "score": 0.90, "count": 107, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.85, "count": 37, "kind": "entity" },
+          { "term": "柔 měkkost", "score": 0.82, "count": 31, "kind": "word" },
+          { "term": "水 voda", "score": 0.79, "count": 24, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.76, "count": 37, "kind": "phrase" },
+          { "term": "自然 ziran", "score": 0.73, "count": 34, "kind": "word" },
+          { "term": "復 návrat", "score": 0.70, "count": 19, "kind": "word" },
+          { "term": "知足 spokojenost", "score": 0.67, "count": 12, "kind": "phrase" },
+          { "term": "天下 pod nebem", "score": 0.64, "count": 43, "kind": "phrase" }
+        ]
+      },
+      "ch_01": {
+        "terms": [
+          { "term": "道 Tao", "score": 0.99, "count": 5, "kind": "word" },
+          { "term": "名 jméno", "score": 0.92, "count": 4, "kind": "word" },
+          { "term": "無 prázdnota", "score": 0.88, "count": 3, "kind": "word" },
+          { "term": "玄 tajemno", "score": 0.84, "count": 2, "kind": "word" },
+          { "term": "始 počátek", "score": 0.79, "count": 2, "kind": "word" }
+        ]
+      },
+      "ch_08": {
+        "terms": [
+          { "term": "水 voda", "score": 0.99, "count": 4, "kind": "word" },
+          { "term": "善 dobro", "score": 0.91, "count": 5, "kind": "word" },
+          { "term": "下 nízko", "score": 0.86, "count": 3, "kind": "word" },
+          { "term": "無爭 bez soupeření", "score": 0.82, "count": 2, "kind": "phrase" }
+        ]
+      },
+      "ch_25": {
+        "terms": [
+          { "term": "道 Tao", "score": 0.99, "count": 4, "kind": "word" },
+          { "term": "大 velikost", "score": 0.93, "count": 5, "kind": "word" },
+          { "term": "自然 ziran", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "逝 odcházení", "score": 0.84, "count": 2, "kind": "word" }
+        ]
+      },
+      "ch_38": {
+        "terms": [
+          { "term": "德 Te", "score": 0.99, "count": 6, "kind": "word" },
+          { "term": "仁 laskavost", "score": 0.90, "count": 4, "kind": "word" },
+          { "term": "義 spravedlnost", "score": 0.86, "count": 3, "kind": "word" },
+          { "term": "失道 ztráta Taa", "score": 0.82, "count": 3, "kind": "phrase" }
+        ]
+      },
+      "ch_42": {
+        "terms": [
+          { "term": "一 jednota", "score": 0.99, "count": 3, "kind": "word" },
+          { "term": "陰陽 yin-yang", "score": 0.95, "count": 2, "kind": "phrase" },
+          { "term": "道 Tao", "score": 0.88, "count": 3, "kind": "word" },
+          { "term": "萬物 deset tisíc věcí", "score": 0.84, "count": 2, "kind": "phrase" }
+        ]
+      },
+      "ch_78": {
+        "terms": [
+          { "term": "水 voda", "score": 0.99, "count": 4, "kind": "word" },
+          { "term": "柔 měkkost", "score": 0.94, "count": 3, "kind": "word" },
+          { "term": "石 kámen", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "弱勝強 slabé vítězí nad silným", "score": 0.83, "count": 2, "kind": "phrase" }
+        ]
+      },
+      "ch_81": {
+        "terms": [
+          { "term": "信言 pravdivá slova", "score": 0.99, "count": 2, "kind": "phrase" },
+          { "term": "善者 dobrý člověk", "score": 0.92, "count": 2, "kind": "phrase" },
+          { "term": "道 Tao", "score": 0.87, "count": 2, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.82, "count": 3, "kind": "entity" }
+        ]
+      }
+    }
+  },
+  "summaries": {
+    "root": {
+      "cs": "**Tao Te Ťing** (道德經, asi 4. stol. př. n. l.), připsané Lao-c' (老子), je základní text taoistické filozofie. Skládá se z 81 krátkých kapitol rozdělených do dvou knih: Knihy Taa (道) a Knihy Te (德). Ústřední pojmy jsou *Tao* – nevyjádřitelná síla prostupující veškerenstvem, a *Te* – ctnost jako přirozené vyjádření Taa v individuální existenci. Klíčovým principem je *wu-wei* (無為) – jednání bez úsilí, přirozené plynutí bez odporu vůči světu.",
+      "en": "The **Tao Te Ching** (道德經, c. 4th century BCE), attributed to Laozi (老子), is the foundational text of Taoist philosophy. Its 81 short chapters are divided into two books: the Book of Tao (道) and the Book of Te (德). Core concepts are *Tao* — the inexpressible force pervading all things — and *Te* — virtue as the natural expression of Tao in individual existence. The key principle is *wu-wei* (無為): effortless action, natural flow without resistance."
+    },
+    "section_tao": {
+      "cs": "**Kniha Taa (道, kap. 1–37)** zavádí základní paradox: Tao, které lze pojmenovat, není věčné Tao. Prázdnota (無) je produktivní — jako prázdný prostor kola, nádoby či domu. Moudrý (聖人) nevede silou, ale příkladem přirozené spontánnosti (*ziran*). Tao je jako voda: nenápadné, nízko položené, přesto překonává vše pevné.",
+      "en": "**Book of Tao (道, ch. 1–37)** introduces the central paradox: the Tao that can be named is not the eternal Tao. Emptiness (無) is productive — like the empty space in a wheel, vessel, or room. The sage (聖人) leads not by force but by embodying natural spontaneity (*ziran*). Tao is like water: unassuming, low, yet overcoming all that is hard."
+    },
+    "section_te": {
+      "cs": "**Kniha Te (德, kap. 38–81)** rozebírá ctnost jako praktické projevení Taa v lidském životě. Ctnost nejvyššího řádu neví o sobě, že je ctností — jedná spontánně. Moudrý panovník neovládá silou, ale ustupuje jako moře, do něhož ústí všechny řeky. Nejhlubší ctnost je měkká jako voda, která přetrvá i nejtužší skálu.",
+      "en": "**Book of Te (德, ch. 38–81)** examines virtue as the practical expression of Tao in human life. The highest virtue does not know itself as virtue — it acts spontaneously. The sage ruler leads not by force but by yielding, like the sea into which all rivers flow. The deepest virtue is soft like water, which outlasts even the hardest rock."
+    },
+    "ch_01": {
+      "cs": "Tao, které lze vyjádřit slovy, není věčné Tao. Jméno, které lze vyslovit, není věčné jméno. Bezejmenné je počátkem nebe a země, pojmenované je matkou deseti tisíc věcí. V prázdnotě vidíme podstatu Taa, v touze jeho projevy. Obojí pochází ze stejného zdroje — liší se pouze jménem. Tato hlubina je branou ke všem záhadám.",
+      "en": "The Tao that can be told is not the eternal Tao. The name that can be named is not the eternal name. The nameless is the beginning of heaven and earth; the named is the mother of ten thousand things. In emptiness we see Tao's essence; in desire its manifestations. Both spring from the same source, differing only in name. This depth is the gateway to all mystery."
+    },
+    "ch_02": {
+      "cs": "Teprve když víme, co je krásné, poznáme ošklivost. Teprve uvědoměním si dobra poznáme zlo. Bytí a nebytí se rodí jedno z druhého, těžké a lehké se vzájemně definují. Moudrý jedná bez snahy, učí bez slov — deseti tisícům věcí pomáhá bez nároku na zásluhy.",
+      "en": "Only when we recognize beauty do we know ugliness. Only by knowing good do we recognize evil. Being and non-being give rise to each other; difficult and easy define one another. The sage acts without striving and teaches without words, helping ten thousand things without claiming credit."
+    },
+    "ch_08": {
+      "cs": "Nejvyšší dobro je jako voda — prospívá všem věcem a nesoupeří s nimi. Zdržuje se nízkých míst, která ostatní odmítají, a proto se přibližuje Tau. Moudrý bydlí na skromném místě, myslí v hloubce, jedná z laskavosti, mluví upřímně, vede bez úsilí a jedná ve správný čas. Protože nesoupeří, není mu co vytknout.",
+      "en": "The highest good is like water — benefiting all things without striving. It dwells in lowly places that others disdain, and thus it approaches Tao. The sage lives humbly, thinks deeply, acts from kindness, speaks truthfully, governs without effort, and acts in right timing. Because it does not contend, no fault can be found in it."
+    },
+    "ch_25": {
+      "cs": "Existuje cosi beztvarého, před nebem a zemí vzniklého — tiché, neměnné, vše pronikající, nevyčerpatelné: říkejme mu Tao. Tao je veliké, nebe je veliké, země je veliká, i panovník je veliký. Člověk se řídí zemí, země nebem, nebe Tao, Tao se řídí přirozeností (*ziran*).",
+      "en": "There is something formless, born before heaven and earth — silent, unchanging, pervading all, inexhaustible. Let us call it Tao. Tao is great, heaven is great, earth is great, the ruler is great. Humanity follows earth; earth follows heaven; heaven follows Tao; Tao follows its own nature (*ziran*)."
+    },
+    "ch_38": {
+      "cs": "Nejvyšší Te (ctnost) si není vědoma sebe jako ctnosti — proto skutečně ctností je. Nejnižší Te se drží ctnosti — proto ctností vlastně není. Moudrý jedná bez záměru, bez skrytých pohnutek. Když Tao odejde, přijde Te; když Te odejde, přijde laskavost (*jen*); když laskavost odejde, přijde spravedlnost (*i*); a když odejde i ta, zůstane jen etiketa — tenký závoj pravého jednání.",
+      "en": "The highest Te does not know itself as virtue — therefore it truly is virtue. Lower virtue clings to virtue — therefore it is not truly virtue. The sage acts without intention or hidden motive. When Tao departs, Te arrives; when Te departs, kindness (*ren*) comes; when kindness departs, righteousness (*yi*) comes; and when that departs, only ritual etiquette remains — the thin husk of genuine action."
+    },
+    "ch_42": {
+      "cs": "Tao plodí jednu věc, jedna plodí dvě, dvě plodí tři, tři plodí deset tisíc věcí. Deseti tisícům věcí je vlastní yin a yang — dvě protikladné síly v harmonickém napětí. Moudrý neodsuzuje ani osamělost ani slabost — slabé a nízké jsou v souladu s Tao.",
+      "en": "Tao gives birth to one, one gives birth to two, two gives birth to three, three gives birth to ten thousand things. All ten thousand things carry yin and embrace yang — two opposing forces held in harmonious tension. The sage does not shun solitude or weakness — what is weak and low is in accord with Tao."
+    },
+    "ch_78": {
+      "cs": "Nic na světě není měkčí než voda, a přece nic nepřekoná vodu v překonávání tvrdého a silného. Měkké vítězí nad tvrdým, slabé nad silným — každý to ví, ale nikdo to neumí uvést v praxi. Moudrý říká: kdo přijímá hanbu národa, je jeho pánem.",
+      "en": "Nothing in the world is softer than water, yet nothing surpasses water in overcoming the hard and strong. The soft overcomes the hard; the weak overcomes the strong — everyone knows this, yet no one can put it into practice. The sage says: one who accepts the disgrace of the nation becomes its lord."
+    },
+    "ch_81": {
+      "cs": "Pravdivá slova nejsou libozvučná, libozvučná slova nejsou pravdivá. Dobrý člověk nepřesvědčuje hádáním, kdo hádá, není dobrý. Moudrý nehromadí — čím více dává druhým, tím více má sám. Tao nebes prospívá a neškodem, cesta moudrého jedná a nesoupeří.",
+      "en": "True words are not pleasing; pleasing words are not true. A good person does not argue; one who argues is not good. The sage does not hoard — the more they give to others, the more they have themselves. The Tao of heaven benefits and does not harm; the way of the sage acts and does not contend."
+    }
+  }
+}

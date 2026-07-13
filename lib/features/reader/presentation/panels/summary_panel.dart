@@ -33,6 +33,9 @@ class SummaryPanel extends ConsumerWidget {
             key: ValueKey(state.summaryVersion),
             summary: state.displaySummary,
             isEmpty: state.currentNodeId.isEmpty,
+            onNodeTap: (nodeId) => ref
+                .read(readerNotifierProvider(bookSlug).notifier)
+                .jumpTo(nodeId),
           ),
         ),
       ],
@@ -45,10 +48,12 @@ class _SummaryContent extends StatelessWidget {
     super.key,
     required this.summary,
     required this.isEmpty,
+    required this.onNodeTap,
   });
 
   final String? summary;
   final bool isEmpty;
+  final ValueChanged<String> onNodeTap;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +68,8 @@ class _SummaryContent extends StatelessWidget {
       );
     }
 
-    if (summary == null || summary!.isEmpty) {
+    // null = summary not computed yet (loading); empty = nothing available.
+    if (summary == null) {
       return Center(
         child: CircularProgressIndicator(
           strokeWidth: 2,
@@ -72,10 +78,29 @@ class _SummaryContent extends StatelessWidget {
       );
     }
 
+    if (summary!.isEmpty) {
+      return Center(
+        child: Text(
+          'Souhrn není k dispozici',
+          style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
+        ),
+      );
+    }
+
     return Markdown(
       data: summary!,
+      onTapLink: (text, href, title) {
+        const scheme = 'node://';
+        if (href != null && href.startsWith(scheme)) {
+          onNodeTap(href.substring(scheme.length));
+        }
+      },
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       styleSheet: MarkdownStyleSheet(
+        a: TextStyle(
+          color: theme.colorScheme.primary,
+          fontWeight: FontWeight.w600,
+        ),
         p: TextStyle(
           fontSize: 14,
           height: 1.5,

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:drift/drift.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -16,15 +17,42 @@ class BundleLoader {
 
   /// Load a demo bundle from Flutter assets: assets/bundles/{slug}.json
   Future<void> loadFromAssets(String slug) async {
-    final jsonStr = await rootBundle.loadString('assets/bundles/$slug.json');
-    final json = jsonDecode(jsonStr) as Map<String, dynamic>;
-    final bundle = BookBundle.fromJson(json);
-    await _importBundle(bundle);
+    await _importBundle(await _loadBundleAsset(slug));
+  }
+
+  /// Re-import the bundled asset for [slug] when its `pipelineVersion`
+  /// differs from what is stored in the DB, so edits to the bundled JSON
+  /// reach users who already imported the book. Book slugs use hyphens
+  /// (`dao-de-jing`) while asset files use underscores (`dao_de_jing.json`).
+  /// Books without a matching asset (e.g. downloaded ones) are left as-is.
+  Future<void> ensureFresh(String slug) async {
+    final BookBundle bundle;
+    try {
+      bundle = await _loadBundleAsset(slug.replaceAll('-', '_'));
+    } on FlutterError {
+      return; // No bundled asset for this book.
+    }
+    final existing = await _db.bookBySlug(bundle.manifest.slug);
+    if (existing == null ||
+        existing.pipelineVersion != bundle.manifest.pipelineVersion) {
+      await _importBundle(bundle);
+    }
+  }
+
+  Future<BookBundle> _loadBundleAsset(String assetName) async {
+    final jsonStr =
+        await rootBundle.loadString('assets/bundles/$assetName.json');
+    return BookBundle.fromJson(jsonDecode(jsonStr) as Map<String, dynamic>);
   }
 
   Future<void> _importBundle(BookBundle bundle) async {
     final manifest = bundle.manifest;
     final slug = manifest.slug;
+
+    // Node IDs are only unique within a bundle (every book has a `root`),
+    // but the Nodes table PK is the bare id — prefix with the book slug so
+    // books cannot overwrite each other's nodes, terms, and summaries.
+    String nodeKey(String id) => '$slug:$id';
 
     // Remove any previous version of this book.
     await _db.deleteBook(slug);
@@ -44,14 +72,14 @@ class BundleLoader {
     );
 
     // Walk the tree and insert nodes recursively.
-    await _insertNode(manifest.tree, slug, null, 0);
+    await _insertNode(manifest.tree, slug, null, 0, nodeKey);
 
     // Insert terms.
     for (final entry in bundle.words.nodes.entries) {
       for (final term in entry.value.terms) {
         await _db.insertTerm(
           TermsCompanion.insert(
-            nodeId: entry.key,
+            nodeId: nodeKey(entry.key),
             bookSlug: slug,
             term: term.term,
             score: term.score,
@@ -67,7 +95,7 @@ class BundleLoader {
       for (final localeEntry in nodeEntry.value.entries) {
         await _db.upsertSummary(
           SummariesCompanion.insert(
-            nodeId: nodeEntry.key,
+            nodeId: nodeKey(nodeEntry.key),
             locale: localeEntry.key,
             content: localeEntry.value,
           ),
@@ -81,10 +109,11 @@ class BundleLoader {
     String bookSlug,
     String? parentId,
     int depth,
+    String Function(String) nodeKey,
   ) async {
     await _db.insertNode(
       NodesCompanion.insert(
-        id: node.id,
+        id: nodeKey(node.id),
         bookSlug: bookSlug,
         kind: node.kind,
         label: node.label,
@@ -95,7 +124,7 @@ class BundleLoader {
       ),
     );
     for (final child in node.children) {
-      await _insertNode(child, bookSlug, node.id, depth + 1);
+      await _insertNode(child, bookSlug, nodeKey(node.id), depth + 1, nodeKey);
     }
   }
 

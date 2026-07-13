@@ -5,7 +5,7 @@
     "title": "Tao Te Ťing (道德經)",
     "sourceLanguage": "zh",
     "script": "han",
-    "pipelineVersion": "demo-1.0",
+    "pipelineVersion": "demo-1.2",
     "generatedAt": "2026-05-24T00:00:00Z",
     "tree": {
       "id": "root",
@@ -119,12 +119,85 @@
           { "term": "始 počátek", "score": 0.79, "count": 2, "kind": "word" }
         ]
       },
+      "ch_02": {
+        "terms": [
+          { "term": "有無 bytí a nebytí", "score": 0.98, "count": 3, "kind": "phrase" },
+          { "term": "美 krása", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.87, "count": 2, "kind": "phrase" },
+          { "term": "聖人 moudrý", "score": 0.83, "count": 2, "kind": "entity" },
+          { "term": "不言 učení beze slov", "score": 0.78, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_03": {
+        "terms": [
+          { "term": "欲 touha", "score": 0.98, "count": 3, "kind": "word" },
+          { "term": "治 vládnutí", "score": 0.92, "count": 2, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.86, "count": 2, "kind": "entity" },
+          { "term": "無為 wu-wei", "score": 0.82, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_04": {
+        "terms": [
+          { "term": "淵 hlubina", "score": 0.97, "count": 2, "kind": "word" },
+          { "term": "無 prázdnota", "score": 0.92, "count": 2, "kind": "word" },
+          { "term": "道 Tao", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "挫銳 otupení ostří", "score": 0.81, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_05": {
+        "terms": [
+          { "term": "芻狗 slaměný pes", "score": 0.98, "count": 2, "kind": "phrase" },
+          { "term": "橐籥 měch", "score": 0.93, "count": 1, "kind": "word" },
+          { "term": "天地 nebe a země", "score": 0.88, "count": 3, "kind": "phrase" },
+          { "term": "聖人 moudrý", "score": 0.80, "count": 1, "kind": "entity" }
+        ]
+      },
+      "ch_06": {
+        "terms": [
+          { "term": "谷神 duch údolí", "score": 0.99, "count": 2, "kind": "phrase" },
+          { "term": "牝 ženskost", "score": 0.94, "count": 2, "kind": "word" },
+          { "term": "谷 údolí", "score": 0.89, "count": 2, "kind": "word" },
+          { "term": "天地 nebe a země", "score": 0.82, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_07": {
+        "terms": [
+          { "term": "長久 trvalost", "score": 0.97, "count": 2, "kind": "word" },
+          { "term": "無私 nesobeckost", "score": 0.93, "count": 2, "kind": "phrase" },
+          { "term": "天地 nebe a země", "score": 0.87, "count": 2, "kind": "phrase" },
+          { "term": "聖人 moudrý", "score": 0.81, "count": 2, "kind": "entity" }
+        ]
+      },
       "ch_08": {
         "terms": [
           { "term": "水 voda", "score": 0.99, "count": 4, "kind": "word" },
           { "term": "善 dobro", "score": 0.91, "count": 5, "kind": "word" },
           { "term": "下 nízko", "score": 0.86, "count": 3, "kind": "word" },
           { "term": "無爭 bez soupeření", "score": 0.82, "count": 2, "kind": "phrase" }
+        ]
+      },
+      "ch_09": {
+        "terms": [
+          { "term": "功遂身退 ustoupit po díle", "score": 0.97, "count": 1, "kind": "phrase" },
+          { "term": "富貴 bohatství", "score": 0.92, "count": 2, "kind": "word" },
+          { "term": "銳 ostří", "score": 0.86, "count": 1, "kind": "word" },
+          { "term": "知足 spokojenost", "score": 0.80, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_10": {
+        "terms": [
+          { "term": "魄 duše", "score": 0.97, "count": 2, "kind": "word" },
+          { "term": "嬰兒 novorozeně", "score": 0.92, "count": 1, "kind": "word" },
+          { "term": "一 jednota", "score": 0.87, "count": 2, "kind": "word" },
+          { "term": "玄德 tajemná ctnost", "score": 0.82, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_11": {
+        "terms": [
+          { "term": "車輪 kolo", "score": 0.98, "count": 1, "kind": "word" },
+          { "term": "器 nádoba", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "無 prázdnota", "score": 0.89, "count": 3, "kind": "word" },
+          { "term": "用 užitek", "score": 0.84, "count": 3, "kind": "word" }
         ]
       },
       "ch_25": {
@@ -135,6 +208,22 @@
           { "term": "逝 odcházení", "score": 0.84, "count": 2, "kind": "word" }
         ]
       },
+      "ch_28": {
+        "terms": [
+          { "term": "雌雄 mužské a ženské", "score": 0.98, "count": 2, "kind": "phrase" },
+          { "term": "樸 syrové dřevo", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "嬰兒 novorozeně", "score": 0.88, "count": 1, "kind": "word" },
+          { "term": "谷 údolí", "score": 0.83, "count": 2, "kind": "word" }
+        ]
+      },
+      "ch_37": {
+        "terms": [
+          { "term": "無為 wu-wei", "score": 0.99, "count": 2, "kind": "phrase" },
+          { "term": "樸 syrové dřevo", "score": 0.92, "count": 2, "kind": "word" },
+          { "term": "靜 klid", "score": 0.87, "count": 1, "kind": "word" },
+          { "term": "萬物 deset tisíc věcí", "score": 0.82, "count": 1, "kind": "phrase" }
+        ]
+      },
       "ch_38": {
         "terms": [
           { "term": "德 Te", "score": 0.99, "count": 6, "kind": "word" },
@@ -143,12 +232,76 @@
           { "term": "失道 ztráta Taa", "score": 0.82, "count": 3, "kind": "phrase" }
         ]
       },
+      "ch_40": {
+        "terms": [
+          { "term": "復 návrat", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "弱 slabost", "score": 0.93, "count": 1, "kind": "word" },
+          { "term": "無 prázdnota", "score": 0.87, "count": 2, "kind": "word" },
+          { "term": "萬物 deset tisíc věcí", "score": 0.82, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_41": {
+        "terms": [
+          { "term": "笑 smích", "score": 0.97, "count": 2, "kind": "word" },
+          { "term": "大器晚成 velká nádoba se dokončuje pozdě", "score": 0.93, "count": 1, "kind": "phrase" },
+          { "term": "道 Tao", "score": 0.88, "count": 4, "kind": "word" },
+          { "term": "明道若昧 jasná cesta se zdá temná", "score": 0.83, "count": 1, "kind": "phrase" }
+        ]
+      },
       "ch_42": {
         "terms": [
           { "term": "一 jednota", "score": 0.99, "count": 3, "kind": "word" },
           { "term": "陰陽 yin-yang", "score": 0.95, "count": 2, "kind": "phrase" },
           { "term": "道 Tao", "score": 0.88, "count": 3, "kind": "word" },
           { "term": "萬物 deset tisíc věcí", "score": 0.84, "count": 2, "kind": "phrase" }
+        ]
+      },
+      "ch_43": {
+        "terms": [
+          { "term": "柔 měkkost", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "堅 tvrdost", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.88, "count": 2, "kind": "phrase" },
+          { "term": "不言 učení beze slov", "score": 0.83, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_48": {
+        "terms": [
+          { "term": "損 ubírání", "score": 0.98, "count": 3, "kind": "word" },
+          { "term": "學 učení", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "無為 wu-wei", "score": 0.89, "count": 2, "kind": "phrase" },
+          { "term": "道 Tao", "score": 0.84, "count": 2, "kind": "word" }
+        ]
+      },
+      "ch_55": {
+        "terms": [
+          { "term": "嬰兒 novorozeně", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "和 harmonie", "score": 0.94, "count": 3, "kind": "word" },
+          { "term": "德 Te", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "精 životní síla", "score": 0.83, "count": 1, "kind": "word" }
+        ]
+      },
+      "ch_63": {
+        "terms": [
+          { "term": "無為 wu-wei", "score": 0.99, "count": 2, "kind": "phrase" },
+          { "term": "難易 těžké a snadné", "score": 0.94, "count": 3, "kind": "phrase" },
+          { "term": "小 malé", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "聖人 moudrý", "score": 0.83, "count": 2, "kind": "entity" }
+        ]
+      },
+      "ch_66": {
+        "terms": [
+          { "term": "江海 řeky a moře", "score": 0.99, "count": 2, "kind": "phrase" },
+          { "term": "下 nízko", "score": 0.94, "count": 3, "kind": "word" },
+          { "term": "民 lid", "score": 0.88, "count": 3, "kind": "word" },
+          { "term": "無爭 bez soupeření", "score": 0.83, "count": 1, "kind": "phrase" }
+        ]
+      },
+      "ch_76": {
+        "terms": [
+          { "term": "柔 měkkost", "score": 0.98, "count": 3, "kind": "word" },
+          { "term": "死 smrt", "score": 0.93, "count": 3, "kind": "word" },
+          { "term": "弱 slabost", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "草木 tráva a stromy", "score": 0.83, "count": 1, "kind": "phrase" }
         ]
       },
       "ch_78": {
@@ -190,21 +343,93 @@
       "cs": "Teprve když víme, co je krásné, poznáme ošklivost. Teprve uvědoměním si dobra poznáme zlo. Bytí a nebytí se rodí jedno z druhého, těžké a lehké se vzájemně definují. Moudrý jedná bez snahy, učí bez slov — deseti tisícům věcí pomáhá bez nároku na zásluhy.",
       "en": "Only when we recognize beauty do we know ugliness. Only by knowing good do we recognize evil. Being and non-being give rise to each other; difficult and easy define one another. The sage acts without striving and teaches without words, helping ten thousand things without claiming credit."
     },
+    "ch_03": {
+      "cs": "Nevyzdvihovat schopné — a lid nebude soupeřit. Necenit vzácné zboží — a lid nebude krást. Neukazovat, co vzbuzuje touhu — a srdce lidu zůstane klidné. Moudrý vládne tak, že vyprazdňuje mysli a naplňuje břicha, oslabuje ctižádost a posiluje kosti. Jedná nejednáním (*wu-wei*) — a nic nezůstane nespravováno.",
+      "en": "Not exalting the able keeps people from contending. Not prizing rare goods keeps them from stealing. Not displaying what stirs desire keeps their hearts calm. The sage governs by emptying minds and filling bellies, weakening ambition and strengthening bones. He acts by non-action (*wu-wei*) — and nothing remains ungoverned."
+    },
+    "ch_04": {
+      "cs": "Tao je prázdné, a přece jeho užívání nic nevyčerpá. Je bezedné jako hlubina — jako by bylo praotcem deseti tisíc věcí. Otupuje ostří, rozplétá uzly, tlumí zář, splývá s prachem. Nevím, čí je dítě — zdá se, že předchází i samotné bohy.",
+      "en": "Tao is empty, yet its use is never exhausted. Bottomless like an abyss — it seems the ancestor of ten thousand things. It blunts sharpness, unties knots, softens glare, merges with the dust. I do not know whose child it is — it seems to precede even the gods."
+    },
+    "ch_05": {
+      "cs": "Nebe a země nejsou laskavé — zacházejí s deseti tisíci věcmi jako se slaměnými psy z obětiště. Ani moudrý není laskavý — zachází s lidmi stejně nestranně. Prostor mezi nebem a zemí je jako kovářský měch: prázdný, a přece nevyčerpatelný; čím víc se hýbe, tím víc vydává. Mnoho slov vede k vyčerpání — lepší je držet se středu.",
+      "en": "Heaven and earth are not humane — they treat ten thousand things as straw dogs of the altar. Nor is the sage humane — he treats all people with the same impartiality. The space between heaven and earth is like a bellows: empty yet inexhaustible; the more it moves, the more it yields. Many words lead to exhaustion — better to hold to the center."
+    },
+    "ch_06": {
+      "cs": "Duch údolí neumírá — nazývá se tajemná ženskost (牝). Brána tajemné ženskosti je kořenem nebe a země. Trvá nepřetržitě, sotva znatelná — a přece její užívání nikdy nevyčerpáš.",
+      "en": "The valley spirit never dies — it is called the mysterious female (牝). The gateway of the mysterious female is the root of heaven and earth. It endures continuously, barely perceptible — yet its use can never be exhausted."
+    },
+    "ch_07": {
+      "cs": "Nebe je trvalé a země vytrvalá, protože nežijí samy pro sebe — proto mohou žít dlouho. Moudrý se staví na poslední místo, a ocitá se vpředu; nedbá o sebe, a je zachován. Právě skrze nesobeckost naplňuje sám sebe.",
+      "en": "Heaven is lasting and earth enduring because they do not live for themselves — therefore they live long. The sage puts himself last and finds himself first; he disregards himself and is preserved. It is through selflessness that he fulfills himself."
+    },
     "ch_08": {
       "cs": "Nejvyšší dobro je jako voda — prospívá všem věcem a nesoupeří s nimi. Zdržuje se nízkých míst, která ostatní odmítají, a proto se přibližuje Tau. Moudrý bydlí na skromném místě, myslí v hloubce, jedná z laskavosti, mluví upřímně, vede bez úsilí a jedná ve správný čas. Protože nesoupeří, není mu co vytknout.",
       "en": "The highest good is like water — benefiting all things without striving. It dwells in lowly places that others disdain, and thus it approaches Tao. The sage lives humbly, thinks deeply, acts from kindness, speaks truthfully, governs without effort, and acts in right timing. Because it does not contend, no fault can be found in it."
+    },
+    "ch_09": {
+      "cs": "Lepší je přestat, než naplnit až po okraj. Čepel příliš nabroušená dlouho nevydrží. Síň plnou zlata a nefritu nikdo neuhlídá. Pýcha na bohatství a pocty přivolává pád. Ustoupit, když je dílo dokonáno — to je cesta nebes.",
+      "en": "Better to stop than to fill to the brim. A blade sharpened too keen will not last. A hall full of gold and jade cannot be guarded. Pride in wealth and honors invites downfall. To withdraw when the work is done — that is the way of heaven."
+    },
+    "ch_10": {
+      "cs": "Dokážeš sjednotit duši a tělo, aby se nerozdělily? Soustředit dech a zjemnět jako novorozeně? Očistit vnitřní zrcadlo, aby bylo bez poskvrny? Milovat lid a vládnout zemi bez vychytralosti? Rodit a živit, tvořit a nevlastnit, působit a nespoléhat na zásluhy, vést a neovládat — to je tajemná ctnost (玄德).",
+      "en": "Can you unite soul and body so they do not separate? Concentrate your breath and become soft as a newborn? Polish the inner mirror until it is spotless? Love the people and govern the land without cleverness? To give birth and nourish, to create without possessing, to act without claiming credit, to lead without dominating — this is the mysterious virtue (玄德)."
+    },
+    "ch_11": {
+      "cs": "Třicet loukotí se sbíhá v jednom náboji — právě prázdnota uprostřed činí kolo užitečným. Z hlíny se vytváří nádoba — právě dutina uvnitř ji činí užitečnou. Prolamují se dveře a okna — právě prázdnota činí dům obyvatelným. Bytí přináší prospěch, nebytí užitek.",
+      "en": "Thirty spokes converge on one hub — it is the emptiness at the center that makes the wheel useful. Clay is shaped into a vessel — it is the hollow within that makes it useful. Doors and windows are cut for a room — it is the emptiness that makes it livable. Being brings advantage; non-being brings usefulness."
     },
     "ch_25": {
       "cs": "Existuje cosi beztvarého, před nebem a zemí vzniklého — tiché, neměnné, vše pronikající, nevyčerpatelné: říkejme mu Tao. Tao je veliké, nebe je veliké, země je veliká, i panovník je veliký. Člověk se řídí zemí, země nebem, nebe Tao, Tao se řídí přirozeností (*ziran*).",
       "en": "There is something formless, born before heaven and earth — silent, unchanging, pervading all, inexhaustible. Let us call it Tao. Tao is great, heaven is great, earth is great, the ruler is great. Humanity follows earth; earth follows heaven; heaven follows Tao; Tao follows its own nature (*ziran*)."
     },
+    "ch_28": {
+      "cs": "Znej mužské, ale drž se ženského — staň se údolím světa. Znej bílé, ale drž se černého — staň se vzorem světa. Znej slávu, ale drž se pokory. Vrať se do stavu novorozeněte, do stavu neopracovaného dřeva (樸). Když se dřevo rozřeže, vzniknou nástroje — moudrý však užívá celku, a proto velké řezání nedělí.",
+      "en": "Know the masculine, yet hold to the feminine — become the valley of the world. Know the white, yet hold to the black — become the pattern of the world. Know glory, yet hold to humility. Return to the state of the newborn, to the uncarved wood (樸). When the wood is carved, tools arise — but the sage uses the whole, and so the great carving does not divide."
+    },
+    "ch_37": {
+      "cs": "Tao trvale nejedná — a přece nic nezůstane neučiněno. Kdyby se ho vládci dokázali držet, deset tisíc věcí by se proměňovalo samo od sebe. Kdyby se v proměně zvedla touha, ztišil bych ji bezejmennou prostotou (樸). Bez touhy nastane klid — a svět se urovná sám.",
+      "en": "Tao never acts — yet nothing remains undone. If rulers could hold to it, the ten thousand things would transform of themselves. Should desire arise in that transformation, I would still it with nameless simplicity (樸). Without desire comes stillness — and the world settles itself."
+    },
     "ch_38": {
       "cs": "Nejvyšší Te (ctnost) si není vědoma sebe jako ctnosti — proto skutečně ctností je. Nejnižší Te se drží ctnosti — proto ctností vlastně není. Moudrý jedná bez záměru, bez skrytých pohnutek. Když Tao odejde, přijde Te; když Te odejde, přijde laskavost (*jen*); když laskavost odejde, přijde spravedlnost (*i*); a když odejde i ta, zůstane jen etiketa — tenký závoj pravého jednání.",
       "en": "The highest Te does not know itself as virtue — therefore it truly is virtue. Lower virtue clings to virtue — therefore it is not truly virtue. The sage acts without intention or hidden motive. When Tao departs, Te arrives; when Te departs, kindness (*ren*) comes; when kindness departs, righteousness (*yi*) comes; and when that departs, only ritual etiquette remains — the thin husk of genuine action."
     },
+    "ch_40": {
+      "cs": "Návrat je pohybem Taa, slabost je jeho působením. Deset tisíc věcí pod nebem se rodí z bytí — a bytí se rodí z nebytí.",
+      "en": "Return is the movement of Tao; weakness is its way of working. The ten thousand things under heaven are born of being — and being is born of non-being."
+    },
+    "ch_41": {
+      "cs": "Když nejlepší žák slyší o Tao, usilovně podle něj jedná. Když průměrný žák slyší o Tao, hned je má, hned ztrácí. Když nejhorší žák slyší o Tao, hlasitě se směje — kdyby se nesmál, nebylo by to Tao. Jasná cesta se zdá temná, cesta vpřed se zdá ústupem. Velká nádoba se dokončuje pozdě, velký tón je sotva slyšet, velký obraz nemá tvar.",
+      "en": "When the best student hears of Tao, he practices it diligently. When the average student hears of Tao, he keeps it one moment and loses it the next. When the worst student hears of Tao, he laughs aloud — were he not to laugh, it would not be Tao. The bright path seems dark; advancing seems like retreat. The great vessel is completed late; the great note is barely heard; the great image has no form."
+    },
     "ch_42": {
       "cs": "Tao plodí jednu věc, jedna plodí dvě, dvě plodí tři, tři plodí deset tisíc věcí. Deseti tisícům věcí je vlastní yin a yang — dvě protikladné síly v harmonickém napětí. Moudrý neodsuzuje ani osamělost ani slabost — slabé a nízké jsou v souladu s Tao.",
       "en": "Tao gives birth to one, one gives birth to two, two gives birth to three, three gives birth to ten thousand things. All ten thousand things carry yin and embrace yang — two opposing forces held in harmonious tension. The sage does not shun solitude or weakness — what is weak and low is in accord with Tao."
+    },
+    "ch_43": {
+      "cs": "Nejměkčí na světě překonává nejtvrdší. To, co nemá hmotu, proniká i tam, kde není žádná skulina. Odtud vím o užitku nejednání (*wu-wei*). Učení beze slov a prospěch nejednání — málokdo pod nebem jich dosahuje.",
+      "en": "The softest thing in the world overcomes the hardest. That which has no substance enters where there is no gap. From this I know the benefit of non-action (*wu-wei*). Teaching without words and the profit of non-action — few under heaven attain them."
+    },
+    "ch_48": {
+      "cs": "Ve studiu se den ze dne přidává, na cestě Taa se den ze dne ubírá. Ubírá se a ubírá, až se dojde k nejednání — a v nejednání nic nezůstane neučiněno. Svět se získává nevměšováním; kdo se vměšuje, na získání světa nestačí.",
+      "en": "In study, something is added day by day; on the way of Tao, something is dropped day by day. Less and less, until one arrives at non-action — and in non-action nothing remains undone. The world is won by non-interference; whoever interferes is not enough to win the world."
+    },
+    "ch_55": {
+      "cs": "Kdo je naplněn ctností, podobá se novorozeněti: vosy a hadi ho nebodnou, dravci se ho nezmocní. Kosti má měkké a šlachy slabé, a přece pevně svírá. Celý den křičí, a nezachraptí — dokonalá harmonie (和). Znát harmonii znamená stálost, znát stálost znamená jasnost.",
+      "en": "One filled with virtue is like a newborn: wasps and serpents do not sting him, beasts of prey do not seize him. His bones are soft and sinews weak, yet his grip is firm. He cries all day without growing hoarse — perfect harmony (和). To know harmony is constancy; to know constancy is clarity."
+    },
+    "ch_63": {
+      "cs": "Jednej bez jednání, pracuj bez zasahování, ochutnávej bez chuti. Na křivdu odpovídej ctností. Těžké řeš, dokud je snadné; velké konej, dokud je malé. Vše těžké na světě začíná jako snadné, vše velké jako malé. Moudrý se nikdy nepokouší o velikost — a právě proto ji dovršuje.",
+      "en": "Act without acting, work without interfering, taste without tasting. Repay injury with virtue. Handle the difficult while it is still easy; do the great while it is still small. All that is difficult in the world begins as easy; all that is great begins as small. The sage never attempts greatness — and precisely thus achieves it."
+    },
+    "ch_66": {
+      "cs": "Řeky a moře vládnou stovkám údolí proto, že leží níže než ona — proto jsou králi sta údolí. Kdo chce stát nad lidem, musí k němu mluvit zdola; kdo chce jít před lidem, musí se držet vzadu. Moudrý stojí nahoře, a lid necítí jeho tíhu; jde vpředu, a lid v tom nevidí újmu. Protože nesoupeří, nikdo pod nebem s ním nedokáže soupeřit.",
+      "en": "Rivers and seas rule the hundred valleys because they lie lower — thus they are kings of the hundred valleys. Whoever would stand above the people must speak from below; whoever would lead the people must keep behind. The sage stands above, and the people feel no weight; he goes ahead, and the people see no harm. Because he does not contend, no one under heaven can contend with him."
+    },
+    "ch_76": {
+      "cs": "Člověk se rodí měkký a slabý; když umírá, je tvrdý a tuhý. Tráva a stromy jsou za života křehké a vláčné; po smrti suché a lámavé. Tvrdé a silné je druhem smrti, měkké a slabé druhem života. Proto tuhé vojsko nezvítězí a tuhý strom se zlomí. Silné a velké klesá dolů, měkké a slabé stoupá vzhůru.",
+      "en": "A person is born soft and weak; at death, hard and stiff. Grass and trees are tender and supple in life; dry and brittle in death. The hard and strong are companions of death; the soft and weak, companions of life. Thus a rigid army does not win, and a rigid tree breaks. The strong and great sink low; the soft and weak rise high."
     },
     "ch_78": {
       "cs": "Nic na světě není měkčí než voda, a přece nic nepřekoná vodu v překonávání tvrdého a silného. Měkké vítězí nad tvrdým, slabé nad silným — každý to ví, ale nikdo to neumí uvést v praxi. Moudrý říká: kdo přijímá hanbu národa, je jeho pánem.",

@@ -158,34 +158,42 @@ class AppDatabase extends _$AppDatabase {
   Future<void> upsertSummary(SummariesCompanion summary) =>
       into(summaries).insertOnConflictUpdate(summary);
 
-  /// Returns nodes ranked by combined TF-IDF score for the given terms.
-  /// Only nodes that have at least one of the terms are returned.
-  /// Returns nodes BELOW [minDepth] ranked by combined TF-IDF score for terms.
-  Future<List<Node>> scoreNodesForTerms(
-    String bookSlug,
+  /// Returns descendants of [ancestorId] ranked by combined TF-IDF score
+  /// for the given terms. Only nodes with at least one matching term are
+  /// returned. With [includeSelf], the ancestor itself may also match.
+  Future<List<Node>> scoreDescendantsForTerms(
+    String ancestorId,
     List<String> termList, {
-    int minDepth = 1,
+    bool includeSelf = false,
+    int limit = 10,
   }) async {
     if (termList.isEmpty) return [];
     final placeholders = List.filled(termList.length, '?').join(', ');
+    final selfFilter = includeSelf ? '' : 'AND n.id != ?';
     final rows = await customSelect(
       '''
+      WITH RECURSIVE subtree(id) AS (
+        SELECT ?
+        UNION ALL
+        SELECT n.id FROM nodes n JOIN subtree s ON n.parent_id = s.id
+      )
       SELECT n.id, n.book_slug, n.kind, n.label, n.parent_id,
              n.byte_start, n.byte_end, n.depth,
              SUM(t.score) AS total_score
       FROM nodes n
+      JOIN subtree s ON s.id = n.id
       JOIN terms t ON t.node_id = n.id
-      WHERE n.book_slug = ?
-        AND n.depth >= ?
-        AND t.term IN ($placeholders)
+      WHERE t.term IN ($placeholders)
+        $selfFilter
       GROUP BY n.id
       ORDER BY total_score DESC
-      LIMIT 10
+      LIMIT ?
       ''',
       variables: [
-        Variable.withString(bookSlug),
-        Variable.withInt(minDepth),
+        Variable.withString(ancestorId),
         ...termList.map(Variable.withString),
+        if (!includeSelf) Variable.withString(ancestorId),
+        Variable.withInt(limit),
       ],
     ).get();
 

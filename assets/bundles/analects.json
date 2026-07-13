@@ -1,0 +1,271 @@
+{
+  "manifest": {
+    "schemaVersion": "1.0",
+    "slug": "analects",
+    "title": "Hovory (論語)",
+    "sourceLanguage": "zh",
+    "script": "han",
+    "pipelineVersion": "demo-1.1",
+    "generatedAt": "2026-07-11T00:00:00Z",
+    "tree": {
+      "id": "root",
+      "kind": "book",
+      "label": "Hovory",
+      "byteStart": 0,
+      "byteEnd": 30000,
+      "children": [
+        {
+          "id": "section_learning",
+          "kind": "chapter",
+          "label": "學 Učení",
+          "byteStart": 0,
+          "byteEnd": 10000,
+          "children": [
+            { "id": "an_1_1", "kind": "section", "label": "I.1 — Radost z učení", "byteStart": 0, "byteEnd": 2500, "children": [] },
+            { "id": "an_2_11", "kind": "section", "label": "II.11 — Oživovat staré, poznávat nové", "byteStart": 2500, "byteEnd": 5000, "children": [] },
+            { "id": "an_2_15", "kind": "section", "label": "II.15 — Učení a přemýšlení", "byteStart": 5000, "byteEnd": 7500, "children": [] },
+            { "id": "an_7_8", "kind": "section", "label": "VII.8 — Jeden roh, tři rohy", "byteStart": 7500, "byteEnd": 10000, "children": [] }
+          ]
+        },
+        {
+          "id": "section_virtue",
+          "kind": "chapter",
+          "label": "仁 Lidskost",
+          "byteStart": 10000,
+          "byteEnd": 20000,
+          "children": [
+            { "id": "an_1_2", "kind": "section", "label": "I.2 — Kořen lidskosti", "byteStart": 10000, "byteEnd": 12500, "children": [] },
+            { "id": "an_4_8", "kind": "section", "label": "IV.8 — Ráno uslyšet cestu", "byteStart": 12500, "byteEnd": 15000, "children": [] },
+            { "id": "an_12_22", "kind": "section", "label": "XII.22 — Lidskost je milovat lidi", "byteStart": 15000, "byteEnd": 17500, "children": [] },
+            { "id": "an_15_24", "kind": "section", "label": "XV.24 — Vzájemnost (šu)", "byteStart": 17500, "byteEnd": 20000, "children": [] }
+          ]
+        },
+        {
+          "id": "section_governing",
+          "kind": "chapter",
+          "label": "政 Vláda",
+          "byteStart": 20000,
+          "byteEnd": 30000,
+          "children": [
+            { "id": "an_2_1", "kind": "section", "label": "II.1 — Vládnout ctností jako Polárka", "byteStart": 20000, "byteEnd": 22500, "children": [] },
+            { "id": "an_2_3", "kind": "section", "label": "II.3 — Zákony, nebo ctnost", "byteStart": 22500, "byteEnd": 25000, "children": [] },
+            { "id": "an_12_7", "kind": "section", "label": "XII.7 — Důvěra lidu", "byteStart": 25000, "byteEnd": 27500, "children": [] },
+            { "id": "an_13_6", "kind": "section", "label": "XIII.6 — Přímost vládce", "byteStart": 27500, "byteEnd": 30000, "children": [] }
+          ]
+        }
+      ]
+    }
+  },
+  "words": {
+    "nodes": {
+      "root": {
+        "terms": [
+          { "term": "仁 lidskost", "score": 0.98, "count": 109, "kind": "word" },
+          { "term": "君子 ušlechtilý člověk", "score": 0.95, "count": 107, "kind": "entity" },
+          { "term": "學 učení", "score": 0.91, "count": 64, "kind": "word" },
+          { "term": "禮 obřadnost", "score": 0.88, "count": 75, "kind": "word" },
+          { "term": "德 ctnost", "score": 0.85, "count": 40, "kind": "word" },
+          { "term": "政 vláda", "score": 0.82, "count": 43, "kind": "word" },
+          { "term": "道 cesta", "score": 0.79, "count": 60, "kind": "word" },
+          { "term": "孝 úcta k rodičům", "score": 0.76, "count": 19, "kind": "word" },
+          { "term": "信 důvěra", "score": 0.73, "count": 38, "kind": "word" },
+          { "term": "恕 vzájemnost", "score": 0.70, "count": 2, "kind": "word" },
+          { "term": "民 lid", "score": 0.67, "count": 49, "kind": "word" },
+          { "term": "師 učitel", "score": 0.64, "count": 14, "kind": "word" }
+        ]
+      },
+      "section_learning": {
+        "terms": [
+          { "term": "學 učení", "score": 0.99, "count": 31, "kind": "word" },
+          { "term": "思 přemýšlení", "score": 0.92, "count": 9, "kind": "word" },
+          { "term": "師 učitel", "score": 0.88, "count": 8, "kind": "word" },
+          { "term": "君子 ušlechtilý člověk", "score": 0.83, "count": 12, "kind": "entity" },
+          { "term": "故 staré", "score": 0.78, "count": 4, "kind": "word" },
+          { "term": "樂 radost", "score": 0.74, "count": 7, "kind": "word" }
+        ]
+      },
+      "section_virtue": {
+        "terms": [
+          { "term": "仁 lidskost", "score": 0.99, "count": 52, "kind": "word" },
+          { "term": "恕 vzájemnost", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "孝 úcta k rodičům", "score": 0.88, "count": 9, "kind": "word" },
+          { "term": "君子 ušlechtilý člověk", "score": 0.84, "count": 21, "kind": "entity" },
+          { "term": "道 cesta", "score": 0.79, "count": 15, "kind": "word" },
+          { "term": "愛 láska", "score": 0.75, "count": 6, "kind": "word" }
+        ]
+      },
+      "section_governing": {
+        "terms": [
+          { "term": "政 vláda", "score": 0.99, "count": 24, "kind": "word" },
+          { "term": "民 lid", "score": 0.94, "count": 22, "kind": "word" },
+          { "term": "德 ctnost", "score": 0.89, "count": 13, "kind": "word" },
+          { "term": "信 důvěra", "score": 0.84, "count": 11, "kind": "word" },
+          { "term": "禮 obřadnost", "score": 0.79, "count": 14, "kind": "word" },
+          { "term": "正 přímost", "score": 0.74, "count": 8, "kind": "word" }
+        ]
+      },
+      "an_1_1": {
+        "terms": [
+          { "term": "學 učení", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "樂 radost", "score": 0.94, "count": 2, "kind": "word" },
+          { "term": "朋 přátelé", "score": 0.88, "count": 1, "kind": "word" },
+          { "term": "君子 ušlechtilý člověk", "score": 0.82, "count": 1, "kind": "entity" }
+        ]
+      },
+      "an_2_11": {
+        "terms": [
+          { "term": "溫故知新 oživovat staré, poznávat nové", "score": 0.99, "count": 1, "kind": "phrase" },
+          { "term": "故 staré", "score": 0.93, "count": 1, "kind": "word" },
+          { "term": "師 učitel", "score": 0.87, "count": 1, "kind": "word" },
+          { "term": "學 učení", "score": 0.80, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_2_15": {
+        "terms": [
+          { "term": "思 přemýšlení", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "學 učení", "score": 0.94, "count": 2, "kind": "word" },
+          { "term": "罔 zmatek", "score": 0.87, "count": 1, "kind": "word" },
+          { "term": "殆 nebezpečí", "score": 0.82, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_7_8": {
+        "terms": [
+          { "term": "憤 zápal", "score": 0.98, "count": 1, "kind": "word" },
+          { "term": "隅 roh", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "學 učení", "score": 0.86, "count": 1, "kind": "word" },
+          { "term": "師 učitel", "score": 0.80, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_1_2": {
+        "terms": [
+          { "term": "孝 úcta k rodičům", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "仁 lidskost", "score": 0.94, "count": 2, "kind": "word" },
+          { "term": "本 kořen", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "君子 ušlechtilý člověk", "score": 0.82, "count": 1, "kind": "entity" }
+        ]
+      },
+      "an_4_8": {
+        "terms": [
+          { "term": "道 cesta", "score": 0.99, "count": 1, "kind": "word" },
+          { "term": "朝聞道 ráno uslyšet cestu", "score": 0.94, "count": 1, "kind": "phrase" },
+          { "term": "死 smrt", "score": 0.87, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_12_22": {
+        "terms": [
+          { "term": "仁 lidskost", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "愛 láska", "score": 0.94, "count": 1, "kind": "word" },
+          { "term": "知 poznání", "score": 0.88, "count": 1, "kind": "word" },
+          { "term": "民 lid", "score": 0.82, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_15_24": {
+        "terms": [
+          { "term": "恕 vzájemnost", "score": 0.99, "count": 1, "kind": "word" },
+          { "term": "己所不欲勿施於人 nečiň druhým, co nechceš sám", "score": 0.95, "count": 1, "kind": "phrase" },
+          { "term": "仁 lidskost", "score": 0.86, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_2_1": {
+        "terms": [
+          { "term": "德 ctnost", "score": 0.99, "count": 2, "kind": "word" },
+          { "term": "北辰 Polárka", "score": 0.94, "count": 1, "kind": "entity" },
+          { "term": "政 vláda", "score": 0.88, "count": 1, "kind": "word" },
+          { "term": "星 hvězdy", "score": 0.82, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_2_3": {
+        "terms": [
+          { "term": "刑 tresty", "score": 0.98, "count": 2, "kind": "word" },
+          { "term": "恥 stud", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "德 ctnost", "score": 0.88, "count": 1, "kind": "word" },
+          { "term": "禮 obřadnost", "score": 0.83, "count": 1, "kind": "word" },
+          { "term": "民 lid", "score": 0.78, "count": 2, "kind": "word" }
+        ]
+      },
+      "an_12_7": {
+        "terms": [
+          { "term": "信 důvěra", "score": 0.99, "count": 3, "kind": "word" },
+          { "term": "食 obživa", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "兵 zbraně", "score": 0.88, "count": 2, "kind": "word" },
+          { "term": "民 lid", "score": 0.83, "count": 2, "kind": "word" },
+          { "term": "政 vláda", "score": 0.78, "count": 1, "kind": "word" }
+        ]
+      },
+      "an_13_6": {
+        "terms": [
+          { "term": "正 přímost", "score": 0.99, "count": 3, "kind": "word" },
+          { "term": "令 rozkazy", "score": 0.93, "count": 2, "kind": "word" },
+          { "term": "政 vláda", "score": 0.87, "count": 1, "kind": "word" },
+          { "term": "民 lid", "score": 0.81, "count": 1, "kind": "word" }
+        ]
+      }
+    }
+  },
+  "summaries": {
+    "root": {
+      "cs": "**Hovory** (論語, Lun-jü, sestaveno asi 5.–3. stol. př. n. l.) jsou sbírkou výroků a rozhovorů Konfucia (孔子, 551–479 př. n. l.) zaznamenaných jeho žáky. Ústředními pojmy jsou *žen* (仁) — lidskost, *li* (禮) — obřadnost a slušné jednání, *ťün-c'* (君子) — ušlechtilý člověk, a *süe* (學) — celoživotní učení. Konfucius klade důraz na sebekultivaci, úctu v rodinných vztazích a vládu ctností místo síly.",
+      "en": "The **Analects** (論語, Lunyu, compiled c. 5th–3rd century BCE) collect the sayings and dialogues of Confucius (孔子, 551–479 BCE) as recorded by his disciples. Central concepts are *ren* (仁) — humaneness, *li* (禮) — ritual propriety, *junzi* (君子) — the noble person, and *xue* (學) — lifelong learning. Confucius emphasizes self-cultivation, reverence in family relations, and governing by virtue rather than force."
+    },
+    "section_learning": {
+      "cs": "**Učení (學)** je pro Konfucia radostí i celoživotní povinností. Pravé učení spojuje studium s přemýšlením, oživuje staré poznání jako pramen nového a vyžaduje vlastní zápal žáka — učitel ukáže jeden roh a žák musí najít zbývající tři. Ušlechtilý člověk se učí kvůli sobě, ne kvůli obdivu druhých.",
+      "en": "**Learning (學)** is for Confucius both a joy and a lifelong duty. True learning joins study with reflection, revives old knowledge as a source of the new, and demands the student's own eagerness — the teacher shows one corner and the student must find the other three. The noble person learns for self-cultivation, not for the admiration of others."
+    },
+    "section_virtue": {
+      "cs": "**Lidskost (仁, žen)** je ústřední Konfuciova ctnost: milovat lidi, jednat s vzájemností (恕) a nečinit druhým, co si sám nepřeješ. Jejím kořenem je úcta k rodičům a starším (孝). Lidskost není vzdálený ideál — začíná v nejbližších vztazích a je vzácnější než sám život.",
+      "en": "**Humaneness (仁, ren)** is Confucius's central virtue: to love people, to act with reciprocity (恕), and never to impose on others what you do not wish for yourself. Its root is reverence toward parents and elders (孝). Humaneness is no distant ideal — it begins in the closest relationships and is more precious than life itself."
+    },
+    "section_governing": {
+      "cs": "**Vláda (政)** má stát na ctnosti, ne na trestech. Kdo vládne ctností, je jako Polárka — stojí na svém místě a ostatní hvězdy se k němu obracejí. Zákony a tresty vedou lid k vyhýbavosti bez studu; ctnost a obřadnost vedou ke studu a nápravě. Základem vlády je důvěra lidu — bez ní stát nestojí — a přímost vládce, který napravuje nejprve sám sebe.",
+      "en": "**Government (政)** should rest on virtue, not punishment. One who rules by virtue is like the pole star — it keeps its place and all the stars turn toward it. Laws and punishments make people evasive and shameless; virtue and ritual propriety lead them to shame and self-correction. The foundation of rule is the people's trust — without it no state stands — and the uprightness of the ruler, who corrects himself first."
+    },
+    "an_1_1": {
+      "cs": "Mistr pravil: „Učit se a naučené si v pravý čas opakovat — není to radost? Když přijdou přátelé zdaleka — není to potěšení? Nehněvat se, že mě lidé neznají — není to znak ušlechtilého člověka?“ Úvodní výrok celé sbírky spojuje učení, přátelství a vnitřní nezávislost na uznání.",
+      "en": "The Master said: \"To learn and in due time practice what one has learned — is that not a joy? When friends come from afar — is that not a delight? To feel no resentment when others do not recognize you — is that not the mark of a noble person?\" The opening saying joins learning, friendship, and inner independence from recognition."
+    },
+    "an_2_11": {
+      "cs": "Mistr pravil: „Kdo oživuje staré a poznává nové (溫故知新), může být učitelem.“ Tradice není mrtvá zátěž, ale pramen — teprve kdo jí rozumí do hloubky, dokáže z ní vyvodit nové poznání a vést druhé.",
+      "en": "The Master said: \"One who keeps the old warm and comes to know the new (溫故知新) may become a teacher.\" Tradition is not dead weight but a spring — only one who understands it deeply can draw new knowledge from it and guide others."
+    },
+    "an_2_15": {
+      "cs": "Mistr pravil: „Učení bez přemýšlení je zmatek; přemýšlení bez učení je nebezpečí.“ Studium a vlastní úsudek se musí doplňovat — pouhé hromadění vědomostí oslepuje a pouhé spekulování bez opory svádí na scestí.",
+      "en": "The Master said: \"Learning without thought is confusion; thought without learning is peril.\" Study and independent judgment must complement each other — mere accumulation of knowledge blinds, and mere speculation without grounding leads astray."
+    },
+    "an_7_8": {
+      "cs": "Mistr pravil: „Nevyučuji toho, kdo nehoří zápalem; nepomáhám tomu, kdo se sám nesnaží vyjádřit. Ukážu-li jeden roh a žák nenajde zbývající tři, dál nepokračuji.“ Učení stojí na vlastní aktivitě žáka — učitel jen otevírá dveře.",
+      "en": "The Master said: \"I do not instruct one who is not eager; I do not help one who does not struggle to express himself. If I show one corner and the student cannot return with the other three, I do not continue.\" Learning rests on the student's own effort — the teacher only opens the door."
+    },
+    "an_1_2": {
+      "cs": "Úcta k rodičům a starším bratrům (孝悌) je kořenem lidskosti. Kdo ctí rodiče, zřídka se protiví nadřízeným; kdo se neprotiví, nestrojí vzpoury. Ušlechtilý člověk pečuje o kořen — když je kořen pevný, cesta (道) roste sama.",
+      "en": "Reverence for parents and elder brothers (孝悌) is the root of humaneness. One who honors his parents rarely defies his superiors; one who does not defy them does not stir rebellion. The noble person tends the root — when the root is firm, the Way (道) grows of itself."
+    },
+    "an_4_8": {
+      "cs": "Mistr pravil: „Kdo ráno uslyší cestu (道), může večer klidně zemřít.“ Poznání pravé cesty má větší cenu než sám život — jediný okamžik pravého porozumění naplňuje celou existenci.",
+      "en": "The Master said: \"If one hears the Way (道) in the morning, one may die content in the evening.\" Knowing the true Way is worth more than life itself — a single moment of true understanding fulfills an entire existence."
+    },
+    "an_12_22": {
+      "cs": "Fan Čch' se zeptal na lidskost (仁). Mistr odpověděl: „Milovat lidi.“ Zeptal se na poznání (知). Mistr řekl: „Znát lidi — povyšovat přímé nad křivé, a křiví se narovnají.“ Lidskost není abstrakce: je to láska k lidem projevená v konkrétním jednání a spravedlivém úsudku.",
+      "en": "Fan Chi asked about humaneness (仁). The Master replied: \"To love people.\" He asked about knowledge (知). The Master said: \"To know people — raise the upright above the crooked, and the crooked will straighten.\" Humaneness is no abstraction: it is love for people shown in concrete action and just judgment."
+    },
+    "an_15_24": {
+      "cs": "C'-kung se zeptal: „Existuje jediné slovo, podle něhož lze jednat po celý život?“ Mistr odpověděl: „Není to vzájemnost (恕)? Co sám nechceš, nečiň druhým (己所不欲，勿施於人).“ Zlaté pravidlo v konfuciánské podobě — měřítkem jednání vůči druhým je vlastní srdce.",
+      "en": "Zigong asked: \"Is there one word by which one may act for a whole lifetime?\" The Master replied: \"Is it not reciprocity (恕)? What you do not wish for yourself, do not impose on others (己所不欲，勿施於人).\" The golden rule in its Confucian form — one's own heart is the measure of conduct toward others."
+    },
+    "an_2_1": {
+      "cs": "Mistr pravil: „Kdo vládne ctností (德), podobá se Polárce (北辰): stojí na svém místě a všechny hvězdy se k ní obracejí.“ Pravá autorita nevzniká nátlakem, ale přitažlivostí příkladu — ctnostný vládce nemusí nutit, lidé se k němu obracejí sami.",
+      "en": "The Master said: \"One who governs by virtue (德) is like the pole star (北辰): it keeps its place and all the stars turn toward it.\" True authority arises not from coercion but from the pull of example — a virtuous ruler need not compel; people turn to him of themselves."
+    },
+    "an_2_3": {
+      "cs": "Mistr pravil: „Veď lid zákony a srovnávej ho tresty — lid se bude vyhýbat, ale nepozná stud. Veď lid ctností a srovnávej ho obřadností — lid pozná stud a napraví se sám.“ Vnější donucení plodí jen vyhýbavost; vnitřní proměna skrze ctnost a slušnost vede k opravdové nápravě.",
+      "en": "The Master said: \"Lead the people by laws and align them by punishments — they will evade and feel no shame. Lead them by virtue and align them by ritual propriety — they will know shame and correct themselves.\" External coercion breeds mere evasion; inner transformation through virtue and propriety brings genuine reform."
+    },
+    "an_12_7": {
+      "cs": "C'-kung se zeptal na vládu. Mistr řekl: „Dostatek obživy, dostatek zbraní a důvěra lidu.“ — „A kdyby bylo nutné něco vypustit?“ — „Nejprve zbraně, potom obživu. Smrt provází lidi odedávna; ale bez důvěry (信) lidu stát nestojí.“ Důvěra je poslední a nejpevnější základ každé vlády.",
+      "en": "Zigong asked about government. The Master said: \"Sufficient food, sufficient arms, and the people's trust.\" — \"And if something had to be given up?\" — \"First arms, then food. Death has accompanied humanity from of old; but without the people's trust (信), no state can stand.\" Trust is the last and firmest foundation of all rule."
+    },
+    "an_13_6": {
+      "cs": "Mistr pravil: „Je-li vládce sám přímý (正), lid jedná i bez rozkazů. Není-li přímý, lid neposlechne, ani když rozkazuje.“ Vláda začíná sebenápravou vládce — příklad je silnější než nařízení.",
+      "en": "The Master said: \"If the ruler himself is upright (正), the people act even without orders. If he is not upright, they will not obey even when he commands.\" Government begins with the ruler's self-correction — example is stronger than decree."
+    }
+  }
+}

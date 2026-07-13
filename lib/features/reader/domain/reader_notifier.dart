@@ -48,6 +48,25 @@ class ReaderNotifier extends _$ReaderNotifier {
     _loadPrecomputedSummary();
   }
 
+  /// Jump to an arbitrary node anywhere in the tree (e.g. a `node://` link
+  /// in a composite summary). Rebuilds the whole breadcrumb path by walking
+  /// parent links up to the root — [navigateTo] only supports moves within
+  /// the current path or into a child.
+  Future<void> jumpTo(String nodeId) async {
+    final db = ref.read(appDatabaseProvider);
+    final path = <String>[nodeId];
+    var node = await db.nodeById(nodeId);
+    if (node == null) return;
+    while (node!.parentId != null) {
+      final parent = await db.nodeById(node.parentId!);
+      if (parent == null) break;
+      path.insert(0, parent.id);
+      node = parent;
+    }
+    state = state.copyWith(currentPath: path);
+    await _updateSummary();
+  }
+
   void toggleWord(String term) {
     final isSelected = state.selectedWords.contains(term);
     final List<String> newSelected;
@@ -96,34 +115,80 @@ class ReaderNotifier extends _$ReaderNotifier {
     }
 
     if (state.selectedWords.isEmpty) {
-      setSummary(await db.summaryForNode(nodeId, 'cs'));
+      setSummary(await _summaryWithFallback(nodeId));
       return;
     }
 
-    // Find best-matching nodes BELOW the current node (depth + 1).
-    final currentNode = await db.nodeById(nodeId);
-    final childDepth = (currentNode?.depth ?? 0) + 1;
-    final scored = await db.scoreNodesForTerms(
-      state.bookSlug,
+    // Find best-matching nodes in the subtree of the current node.
+    final scored = await db.scoreDescendantsForTerms(
+      nodeId,
       state.selectedWords,
-      minDepth: childDepth,
     );
 
-    if (scored.isEmpty) {
-      final summary = await db.summaryForNode(nodeId, 'cs');
-      setSummary('_Žádná sekce neobsahuje všechna vybraná slova._\n\n${summary ?? ''}');
+    if (scored.isNotEmpty) {
+      setSummary(await _compositeSummary(scored));
       return;
     }
 
-    // Build composite summary from top 3 matching nodes.
+    // Nothing below the current node (typically a leaf chapter): show the
+    // node's own summary plus intent-matching nodes from the rest of the book.
+    // Ancestors are excluded — they are already visible in the breadcrumb.
+    final ownSummary = await _summaryWithFallback(nodeId);
+    final rootId = state.currentPath.first;
+    final related = (await db.scoreDescendantsForTerms(
+      rootId,
+      state.selectedWords,
+      includeSelf: true,
+    ))
+        .where((n) => !state.currentPath.contains(n.id))
+        .toList();
+
+    if (related.isEmpty) {
+      setSummary('_Vybraná slova se jinde v knize nevyskytují._\n\n$ownSummary');
+      return;
+    }
+
+    final relatedComposite = await _compositeSummary(related);
+    setSummary(
+      '$ownSummary\n\n### Související jinde v knize\n\n$relatedComposite',
+    );
+  }
+
+  /// Composite of the top-scored nodes that actually have a summary,
+  /// each headed by a tappable `node://` link for non-linear jumps.
+  Future<String> _compositeSummary(List<Node> scored, {int max = 3}) async {
+    final db = ref.read(appDatabaseProvider);
     final buffer = StringBuffer();
-    for (final entry in scored.take(3)) {
-      final summary = await db.summaryForNode(entry.id, 'cs');
+    var written = 0;
+    for (final node in scored) {
+      if (written >= max) break;
+      final summary = await db.summaryForNode(node.id, 'cs');
       if (summary != null && summary.isNotEmpty) {
-        buffer.writeln('**${entry.label}**\n\n$summary\n');
+        buffer.writeln('**[${node.label}](node://${node.id})**\n\n$summary\n');
+        written++;
       }
     }
-    setSummary(buffer.toString().trim());
+    return buffer.toString().trim();
+  }
+
+  /// Summary for [nodeId]; when missing, falls back to the nearest ancestor
+  /// that has one (with a note), never to an empty value.
+  Future<String> _summaryWithFallback(String nodeId) async {
+    final db = ref.read(appDatabaseProvider);
+    final own = await db.summaryForNode(nodeId, 'cs');
+    if (own != null && own.isNotEmpty) return own;
+
+    var node = await db.nodeById(nodeId);
+    while (node?.parentId != null) {
+      node = await db.nodeById(node!.parentId!);
+      if (node == null) break;
+      final ancestor = await db.summaryForNode(node.id, 'cs');
+      if (ancestor != null && ancestor.isNotEmpty) {
+        return '_Souhrn této části není k dispozici — zobrazuji '
+            '${node.label}._\n\n$ancestor';
+      }
+    }
+    return '_Souhrn není k dispozici._';
   }
 
   Future<void> _loadPrecomputedSummary() => _updateSummary();

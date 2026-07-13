@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/database/app_database.dart';
+import '../data/bundle_loader.dart';
 import '../domain/reader_notifier.dart';
 import 'panels/nav_panel.dart';
 import 'panels/summary_panel.dart';
@@ -27,6 +28,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
 
   Future<void> _bootstrapRoot() async {
     final db = ref.read(appDatabaseProvider);
+    await ref.read(bundleLoaderProvider).ensureFresh(widget.bookSlug);
     final roots = await db.rootNodes(widget.bookSlug);
     if (roots.isNotEmpty && mounted) {
       ref

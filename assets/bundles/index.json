@@ -18,6 +18,14 @@
    "pipelineVersion": "demo-1.2"
   },
   {
+   "asset": "zh_lunyu",
+   "slug": "zh-lunyu",
+   "label": "Hovory (Lun-jü) — Konfucius",
+   "sourceLanguage": "lzh",
+   "nodes": 21,
+   "pipelineVersion": "pg-1+2de8d71c"
+  },
+  {
    "asset": "zh_daodejing",
    "slug": "zh-daodejing",
    "label": "Tao te ťing — Lao-c'",

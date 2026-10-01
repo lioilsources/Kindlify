@@ -1,0 +1,21 @@
+{
+ "schemaVersion": "1.0",
+ "bundles": [
+  {
+   "asset": "analects",
+   "slug": "analects",
+   "label": "Hovory (Konfucius)",
+   "sourceLanguage": "zh",
+   "nodes": 16,
+   "pipelineVersion": "demo-1.1"
+  },
+  {
+   "asset": "dao_de_jing",
+   "slug": "dao-de-jing",
+   "label": "Tao Te Ťing",
+   "sourceLanguage": "zh",
+   "nodes": 29,
+   "pipelineVersion": "demo-1.2"
+  }
+ ]
+}

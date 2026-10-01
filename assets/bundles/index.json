@@ -16,6 +16,14 @@
    "sourceLanguage": "zh",
    "nodes": 29,
    "pipelineVersion": "demo-1.2"
+  },
+  {
+   "asset": "zh_daodejing",
+   "slug": "zh-daodejing",
+   "label": "Tao te ťing — Lao-c'",
+   "sourceLanguage": "lzh",
+   "nodes": 82,
+   "pipelineVersion": "pg-1+0baf1f7a"
   }
  ]
 }

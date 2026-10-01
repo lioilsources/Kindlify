@@ -273,5 +273,38 @@ void main() {
     );
     debugPrint('STEP Analects imported and readable');
     await shot('08-analects-root');
+
+    // --- Back to library, load a bundle exported from the library corpus
+    // (rag/kindlify_sync.py), listed via assets/bundles/index.json.
+    const exported = "Načíst Tao te ťing — Lao-c'";
+    await tester.pageBack();
+    await tester.pump(const Duration(milliseconds: 500));
+    await pumpUntil(
+      tester,
+      () => find.text(exported).evaluate().isNotEmpty,
+      description: 'library lists exported bundle from index.json',
+    );
+    await tester.ensureVisible(find.text(exported));
+    final importWatch = Stopwatch()..start();
+    await tester.tap(find.text(exported));
+    await tester.pump(const Duration(milliseconds: 500));
+    await pumpUntil(
+      tester,
+      () => summaryContains(tester, 'Dao de jing'),
+      timeout: const Duration(seconds: 60),
+      description: 'exported bundle root summary appears',
+    );
+    debugPrint('STEP exported bundle imported in ${importWatch.elapsedMilliseconds} ms');
+    await pumpUntil(
+      tester,
+      () => find.widgetWithText(WordBubble, "Lao-c'").evaluate().isNotEmpty,
+      description: 'exported bundle word cloud shows terms',
+    );
+    await pumpUntil(
+      tester,
+      () => find.textContaining('O nevyjádřitelné Cestě').evaluate().isNotEmpty,
+      description: 'exported bundle shows Czech chapter headings',
+    );
+    debugPrint('STEP exported zh-daodejing readable (cloud + Czech chapters)');
   });
 }

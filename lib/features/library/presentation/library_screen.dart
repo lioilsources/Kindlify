@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -14,13 +17,33 @@ Future<List<Book>> localBooks(Ref ref) {
   return ref.watch(appDatabaseProvider).allBooks();
 }
 
-/// Demo bundles shipped as Flutter assets: (asset file name, button label).
+/// Bundles shipped as Flutter assets: (asset file name, button label).
 /// The book slug in the manifest is the asset name with hyphens instead of
 /// underscores (e.g. dao_de_jing.json -> dao-de-jing).
-const _demoBundles = [
+///
+/// The list comes from `assets/bundles/index.json`, written by
+/// `rag/kindlify_sync.py` in WorldLibraryProject — new works from the
+/// library show up without touching Dart. The two hand-written demos are
+/// the fallback when the index is missing or unreadable.
+const _fallbackBundles = [
   ('dao_de_jing', 'Tao Te Ťing'),
   ('analects', 'Hovory (Konfucius)'),
 ];
+
+final bundledBooksProvider = FutureProvider<List<(String, String)>>((ref) async {
+  try {
+    final index = jsonDecode(
+      await rootBundle.loadString('assets/bundles/index.json'),
+    ) as Map<String, dynamic>;
+    final entries = [
+      for (final e in index['bundles'] as List<dynamic>)
+        ((e as Map<String, dynamic>)['asset'] as String, e['label'] as String),
+    ];
+    return entries.isEmpty ? _fallbackBundles : entries;
+  } catch (_) {
+    return _fallbackBundles;
+  }
+});
 
 class LibraryScreen extends ConsumerWidget {
   const LibraryScreen({super.key});
@@ -76,17 +99,19 @@ class LibraryScreen extends ConsumerWidget {
   }
 }
 
-class _DemoButtons extends StatelessWidget {
+class _DemoButtons extends ConsumerWidget {
   const _DemoButtons({required this.onLoadDemo});
 
   final ValueChanged<String> onLoadDemo;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final bundles =
+        ref.watch(bundledBooksProvider).value ?? _fallbackBundles;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        for (final (asset, label) in _demoBundles)
+        for (final (asset, label) in bundles)
           Padding(
             padding: const EdgeInsets.only(bottom: 8),
             child: OutlinedButton.icon(

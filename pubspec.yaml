@@ -76,8 +76,8 @@ flutter:
   generate: true
 
   assets:
-    - assets/bundles/dao_de_jing.json
-    - assets/bundles/analects.json
+    # whole directory: bundles are added by rag/kindlify_sync.py (WorldLibraryProject)
+    - assets/bundles/
 
 flutter_launcher_icons:
   android: "ic_launcher"

@@ -284,7 +284,14 @@ void main() {
       () => find.text(exported).evaluate().isNotEmpty,
       description: 'library lists exported bundle from index.json',
     );
-    await tester.ensureVisible(find.text(exported));
+    // The index lists dozens of works; scroll the library list until the
+    // button is actually on screen (ensureVisible alone missed it at 80).
+    await tester.scrollUntilVisible(
+      find.text(exported),
+      300,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.pump(const Duration(milliseconds: 300));
     final importWatch = Stopwatch()..start();
     await tester.tap(find.text(exported));
     await tester.pump(const Duration(milliseconds: 500));

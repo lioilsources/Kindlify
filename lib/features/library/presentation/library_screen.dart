@@ -30,11 +30,13 @@ const _fallbackBundles = [
   ('analects', 'Hovory (Konfucius)'),
 ];
 
-final bundledBooksProvider = FutureProvider<List<(String, String)>>((ref) async {
+final bundledBooksProvider = FutureProvider<List<(String, String)>>((
+  ref,
+) async {
   try {
-    final index = jsonDecode(
-      await rootBundle.loadString('assets/bundles/index.json'),
-    ) as Map<String, dynamic>;
+    final index =
+        jsonDecode(await rootBundle.loadString('assets/bundles/index.json'))
+            as Map<String, dynamic>;
     final entries = [
       for (final e in index['bundles'] as List<dynamic>)
         ((e as Map<String, dynamic>)['asset'] as String, e['label'] as String),
@@ -106,8 +108,7 @@ class _DemoButtons extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bundles =
-        ref.watch(bundledBooksProvider).value ?? _fallbackBundles;
+    final bundles = ref.watch(bundledBooksProvider).value ?? _fallbackBundles;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -132,25 +133,30 @@ class _EmptyLibrary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Scrollable: the library index lists dozens of works, which would
+    // overflow a plain centered Column.
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            Icons.menu_book_outlined,
-            size: 72,
-            color: Theme.of(context).colorScheme.outlineVariant,
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'Žádné knihy',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              color: Theme.of(context).colorScheme.onSurfaceVariant,
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.menu_book_outlined,
+              size: 72,
+              color: Theme.of(context).colorScheme.outlineVariant,
             ),
-          ),
-          const SizedBox(height: 24),
-          _DemoButtons(onLoadDemo: onLoadDemo),
-        ],
+            const SizedBox(height: 16),
+            Text(
+              'Žádné knihy',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 24),
+            _DemoButtons(onLoadDemo: onLoadDemo),
+          ],
+        ),
       ),
     );
   }

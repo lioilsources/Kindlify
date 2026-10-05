@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../domain/original_text.dart';
 import '../../domain/reader_notifier.dart';
 
 class SummaryPanel extends ConsumerWidget {
@@ -12,6 +13,9 @@ class SummaryPanel extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(readerNotifierProvider(bookSlug));
+    if (ref.watch(showOriginalProvider(bookSlug))) {
+      return _OriginalText(bookSlug: bookSlug);
+    }
 
     return Stack(
       children: [
@@ -165,6 +169,47 @@ class _RagLoadingIndicator extends StatelessWidget {
         strokeWidth: 2,
         color: Theme.of(context).colorScheme.tertiary,
       ),
+    );
+  }
+}
+
+/// Reading mode: the original text of the current node, selectable.
+class _OriginalText extends ConsumerWidget {
+  const _OriginalText({required this.bookSlug});
+
+  final String bookSlug;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final text = ref.watch(currentOriginalTextProvider(bookSlug));
+    return text.when(
+      loading: () => Center(
+        child: CircularProgressIndicator(
+          strokeWidth: 2,
+          color: theme.colorScheme.primary,
+        ),
+      ),
+      error: (e, _) => Center(child: Text('Chyba: $e')),
+      data: (t) => t.isEmpty
+          ? Center(
+              child: Text(
+                'Text originálu u tohoto místa není — vyberte kapitolu',
+                style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
+              ),
+            )
+          : SingleChildScrollView(
+              key: const ValueKey('original-text'),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              child: SelectableText(
+                t,
+                style: TextStyle(
+                  fontSize: 16,
+                  height: 1.6,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+            ),
     );
   }
 }

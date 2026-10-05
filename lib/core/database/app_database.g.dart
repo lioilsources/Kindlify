@@ -620,6 +620,17 @@ class $NodesTable extends Nodes with TableInfo<$NodesTable, Node> {
     requiredDuringInsert: false,
     defaultValue: const Constant(0),
   );
+  static const VerificationMeta _originalTextMeta = const VerificationMeta(
+    'originalText',
+  );
+  @override
+  late final GeneratedColumn<String> originalText = GeneratedColumn<String>(
+    'original_text',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -630,6 +641,7 @@ class $NodesTable extends Nodes with TableInfo<$NodesTable, Node> {
     byteStart,
     byteEnd,
     depth,
+    originalText,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -696,6 +708,15 @@ class $NodesTable extends Nodes with TableInfo<$NodesTable, Node> {
         depth.isAcceptableOrUnknown(data['depth']!, _depthMeta),
       );
     }
+    if (data.containsKey('original_text')) {
+      context.handle(
+        _originalTextMeta,
+        originalText.isAcceptableOrUnknown(
+          data['original_text']!,
+          _originalTextMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -737,6 +758,10 @@ class $NodesTable extends Nodes with TableInfo<$NodesTable, Node> {
         DriftSqlType.int,
         data['${effectivePrefix}depth'],
       )!,
+      originalText: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}original_text'],
+      ),
     );
   }
 
@@ -755,6 +780,7 @@ class Node extends DataClass implements Insertable<Node> {
   final int byteStart;
   final int byteEnd;
   final int depth;
+  final String? originalText;
   const Node({
     required this.id,
     required this.bookSlug,
@@ -764,6 +790,7 @@ class Node extends DataClass implements Insertable<Node> {
     required this.byteStart,
     required this.byteEnd,
     required this.depth,
+    this.originalText,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -778,6 +805,9 @@ class Node extends DataClass implements Insertable<Node> {
     map['byte_start'] = Variable<int>(byteStart);
     map['byte_end'] = Variable<int>(byteEnd);
     map['depth'] = Variable<int>(depth);
+    if (!nullToAbsent || originalText != null) {
+      map['original_text'] = Variable<String>(originalText);
+    }
     return map;
   }
 
@@ -793,6 +823,9 @@ class Node extends DataClass implements Insertable<Node> {
       byteStart: Value(byteStart),
       byteEnd: Value(byteEnd),
       depth: Value(depth),
+      originalText: originalText == null && nullToAbsent
+          ? const Value.absent()
+          : Value(originalText),
     );
   }
 
@@ -810,6 +843,7 @@ class Node extends DataClass implements Insertable<Node> {
       byteStart: serializer.fromJson<int>(json['byteStart']),
       byteEnd: serializer.fromJson<int>(json['byteEnd']),
       depth: serializer.fromJson<int>(json['depth']),
+      originalText: serializer.fromJson<String?>(json['originalText']),
     );
   }
   @override
@@ -824,6 +858,7 @@ class Node extends DataClass implements Insertable<Node> {
       'byteStart': serializer.toJson<int>(byteStart),
       'byteEnd': serializer.toJson<int>(byteEnd),
       'depth': serializer.toJson<int>(depth),
+      'originalText': serializer.toJson<String?>(originalText),
     };
   }
 
@@ -836,6 +871,7 @@ class Node extends DataClass implements Insertable<Node> {
     int? byteStart,
     int? byteEnd,
     int? depth,
+    Value<String?> originalText = const Value.absent(),
   }) => Node(
     id: id ?? this.id,
     bookSlug: bookSlug ?? this.bookSlug,
@@ -845,6 +881,7 @@ class Node extends DataClass implements Insertable<Node> {
     byteStart: byteStart ?? this.byteStart,
     byteEnd: byteEnd ?? this.byteEnd,
     depth: depth ?? this.depth,
+    originalText: originalText.present ? originalText.value : this.originalText,
   );
   Node copyWithCompanion(NodesCompanion data) {
     return Node(
@@ -856,6 +893,9 @@ class Node extends DataClass implements Insertable<Node> {
       byteStart: data.byteStart.present ? data.byteStart.value : this.byteStart,
       byteEnd: data.byteEnd.present ? data.byteEnd.value : this.byteEnd,
       depth: data.depth.present ? data.depth.value : this.depth,
+      originalText: data.originalText.present
+          ? data.originalText.value
+          : this.originalText,
     );
   }
 
@@ -869,7 +909,8 @@ class Node extends DataClass implements Insertable<Node> {
           ..write('parentId: $parentId, ')
           ..write('byteStart: $byteStart, ')
           ..write('byteEnd: $byteEnd, ')
-          ..write('depth: $depth')
+          ..write('depth: $depth, ')
+          ..write('originalText: $originalText')
           ..write(')'))
         .toString();
   }
@@ -884,6 +925,7 @@ class Node extends DataClass implements Insertable<Node> {
     byteStart,
     byteEnd,
     depth,
+    originalText,
   );
   @override
   bool operator ==(Object other) =>
@@ -896,7 +938,8 @@ class Node extends DataClass implements Insertable<Node> {
           other.parentId == this.parentId &&
           other.byteStart == this.byteStart &&
           other.byteEnd == this.byteEnd &&
-          other.depth == this.depth);
+          other.depth == this.depth &&
+          other.originalText == this.originalText);
 }
 
 class NodesCompanion extends UpdateCompanion<Node> {
@@ -908,6 +951,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
   final Value<int> byteStart;
   final Value<int> byteEnd;
   final Value<int> depth;
+  final Value<String?> originalText;
   final Value<int> rowid;
   const NodesCompanion({
     this.id = const Value.absent(),
@@ -918,6 +962,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
     this.byteStart = const Value.absent(),
     this.byteEnd = const Value.absent(),
     this.depth = const Value.absent(),
+    this.originalText = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   NodesCompanion.insert({
@@ -929,6 +974,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
     this.byteStart = const Value.absent(),
     this.byteEnd = const Value.absent(),
     this.depth = const Value.absent(),
+    this.originalText = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
        bookSlug = Value(bookSlug),
@@ -943,6 +989,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
     Expression<int>? byteStart,
     Expression<int>? byteEnd,
     Expression<int>? depth,
+    Expression<String>? originalText,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -954,6 +1001,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
       if (byteStart != null) 'byte_start': byteStart,
       if (byteEnd != null) 'byte_end': byteEnd,
       if (depth != null) 'depth': depth,
+      if (originalText != null) 'original_text': originalText,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -967,6 +1015,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
     Value<int>? byteStart,
     Value<int>? byteEnd,
     Value<int>? depth,
+    Value<String?>? originalText,
     Value<int>? rowid,
   }) {
     return NodesCompanion(
@@ -978,6 +1027,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
       byteStart: byteStart ?? this.byteStart,
       byteEnd: byteEnd ?? this.byteEnd,
       depth: depth ?? this.depth,
+      originalText: originalText ?? this.originalText,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -1009,6 +1059,9 @@ class NodesCompanion extends UpdateCompanion<Node> {
     if (depth.present) {
       map['depth'] = Variable<int>(depth.value);
     }
+    if (originalText.present) {
+      map['original_text'] = Variable<String>(originalText.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -1026,6 +1079,7 @@ class NodesCompanion extends UpdateCompanion<Node> {
           ..write('byteStart: $byteStart, ')
           ..write('byteEnd: $byteEnd, ')
           ..write('depth: $depth, ')
+          ..write('originalText: $originalText, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -2127,6 +2181,7 @@ typedef $$NodesTableCreateCompanionBuilder =
       Value<int> byteStart,
       Value<int> byteEnd,
       Value<int> depth,
+      Value<String?> originalText,
       Value<int> rowid,
     });
 typedef $$NodesTableUpdateCompanionBuilder =
@@ -2139,6 +2194,7 @@ typedef $$NodesTableUpdateCompanionBuilder =
       Value<int> byteStart,
       Value<int> byteEnd,
       Value<int> depth,
+      Value<String?> originalText,
       Value<int> rowid,
     });
 
@@ -2242,6 +2298,11 @@ class $$NodesTableFilterComposer extends Composer<_$AppDatabase, $NodesTable> {
 
   ColumnFilters<int> get depth => $composableBuilder(
     column: $table.depth,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get originalText => $composableBuilder(
+    column: $table.originalText,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2363,6 +2424,11 @@ class $$NodesTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get originalText => $composableBuilder(
+    column: $table.originalText,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   $$BooksTableOrderingComposer get bookSlug {
     final $$BooksTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -2416,6 +2482,11 @@ class $$NodesTableAnnotationComposer
 
   GeneratedColumn<int> get depth =>
       $composableBuilder(column: $table.depth, builder: (column) => column);
+
+  GeneratedColumn<String> get originalText => $composableBuilder(
+    column: $table.originalText,
+    builder: (column) => column,
+  );
 
   $$BooksTableAnnotationComposer get bookSlug {
     final $$BooksTableAnnotationComposer composer = $composerBuilder(
@@ -2531,6 +2602,7 @@ class $$NodesTableTableManager
                 Value<int> byteStart = const Value.absent(),
                 Value<int> byteEnd = const Value.absent(),
                 Value<int> depth = const Value.absent(),
+                Value<String?> originalText = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => NodesCompanion(
                 id: id,
@@ -2541,6 +2613,7 @@ class $$NodesTableTableManager
                 byteStart: byteStart,
                 byteEnd: byteEnd,
                 depth: depth,
+                originalText: originalText,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -2553,6 +2626,7 @@ class $$NodesTableTableManager
                 Value<int> byteStart = const Value.absent(),
                 Value<int> byteEnd = const Value.absent(),
                 Value<int> depth = const Value.absent(),
+                Value<String?> originalText = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => NodesCompanion.insert(
                 id: id,
@@ -2563,6 +2637,7 @@ class $$NodesTableTableManager
                 byteStart: byteStart,
                 byteEnd: byteEnd,
                 depth: depth,
+                originalText: originalText,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0

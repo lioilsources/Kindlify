@@ -23,7 +23,15 @@
    "label": "Abhidhamma — Body sporu",
    "sourceLanguage": "pi",
    "nodes": 226,
-   "pipelineVersion": "pg-1+6c3501be"
+   "pipelineVersion": "pg-2+aa831e70"
+  },
+  {
+   "asset": "pi_abh_vibhanga",
+   "slug": "pi-abh-vibhanga",
+   "label": "Abhidhamma — Rozbory",
+   "sourceLanguage": "pi",
+   "nodes": 33,
+   "pipelineVersion": "pg-2+1b16125d"
   },
   {
    "asset": "pi_abh_dhatukatha",
@@ -31,7 +39,7 @@
    "label": "Abhidhamma — Rozprava o prvcích",
    "sourceLanguage": "pi",
    "nodes": 16,
-   "pipelineVersion": "pg-1+48bbf2aa"
+   "pipelineVersion": "pg-2+7324dc0e"
   },
   {
    "asset": "lat_phi0690_phi003",
@@ -39,15 +47,15 @@
    "label": "Aeneis — Vergilius",
    "sourceLanguage": "lat",
    "nodes": 13,
-   "pipelineVersion": "pg-1+6385a742"
+   "pipelineVersion": "pg-2+ff6b9af9"
   },
   {
    "asset": "grc_tlg0085_tlg005",
    "slug": "grc-tlg0085-tlg005",
    "label": "Agamemnón — Aischylos",
    "sourceLanguage": "grc",
-   "nodes": 16,
-   "pipelineVersion": "pg-1+5aeb05be"
+   "nodes": 73,
+   "pipelineVersion": "pg-2+86374353"
   },
   {
    "asset": "grc_tlg0032_tlg006",
@@ -55,7 +63,47 @@
    "label": "Anabáze — Xenofón",
    "sourceLanguage": "grc",
    "nodes": 8,
-   "pipelineVersion": "pg-1+c810bcbc"
+   "pipelineVersion": "pg-2+7033ea58"
+  },
+  {
+   "asset": "pi_an_dasakanipata",
+   "slug": "pi-an-dasakanipata",
+   "label": "Anguttara-nikája — kniha desítek",
+   "sourceLanguage": "pi",
+   "nodes": 224,
+   "pipelineVersion": "pg-2+41d37d4b"
+  },
+  {
+   "asset": "pi_an_navakanipata",
+   "slug": "pi-an-navakanipata",
+   "label": "Anguttara-nikája — kniha devítek",
+   "sourceLanguage": "pi",
+   "nodes": 88,
+   "pipelineVersion": "pg-2+05a959e7"
+  },
+  {
+   "asset": "pi_an_dukanipata",
+   "slug": "pi-an-dukanipata",
+   "label": "Anguttara-nikája — kniha dvojic",
+   "sourceLanguage": "pi",
+   "nodes": 119,
+   "pipelineVersion": "pg-2+967b483c"
+  },
+  {
+   "asset": "pi_an_ekadasakanipata",
+   "slug": "pi-an-ekadasakanipata",
+   "label": "Anguttara-nikája — kniha jedenáctek",
+   "sourceLanguage": "pi",
+   "nodes": 113,
+   "pipelineVersion": "pg-2+5e1a4883"
+  },
+  {
+   "asset": "pi_an_ekakanipata",
+   "slug": "pi-an-ekakanipata",
+   "label": "Anguttara-nikája — kniha jednotek",
+   "sourceLanguage": "pi",
+   "nodes": 113,
+   "pipelineVersion": "pg-2+787615f7"
   },
   {
    "asset": "pi_an_atthakanipata",
@@ -63,15 +111,55 @@
    "label": "Anguttara-nikája — kniha osmic",
    "sourceLanguage": "pi",
    "nodes": 103,
-   "pipelineVersion": "pg-1+a42b4175"
+   "pipelineVersion": "pg-2+27ddc9a9"
+  },
+  {
+   "asset": "pi_an_pancakanipata",
+   "slug": "pi-an-pancakanipata",
+   "label": "Anguttara-nikája — kniha pětic",
+   "sourceLanguage": "pi",
+   "nodes": 292,
+   "pipelineVersion": "pg-2+45552e2d"
+  },
+  {
+   "asset": "pi_an_sattakanipata",
+   "slug": "pi-an-sattakanipata",
+   "label": "Anguttara-nikája — kniha sedmic",
+   "sourceLanguage": "pi",
+   "nodes": 105,
+   "pipelineVersion": "pg-2+333fad18"
+  },
+  {
+   "asset": "pi_an_tikanipata",
+   "slug": "pi-an-tikanipata",
+   "label": "Anguttara-nikája — kniha trojic",
+   "sourceLanguage": "pi",
+   "nodes": 175,
+   "pipelineVersion": "pg-2+2c124922"
+  },
+  {
+   "asset": "pi_an_catukkanipata",
+   "slug": "pi-an-catukkanipata",
+   "label": "Anguttara-nikája — kniha čtveřic",
+   "sourceLanguage": "pi",
+   "nodes": 309,
+   "pipelineVersion": "pg-2+6b7e8844"
+  },
+  {
+   "asset": "pi_an_chakkanipata",
+   "slug": "pi-an-chakkanipata",
+   "label": "Anguttara-nikája — kniha šestic",
+   "sourceLanguage": "pi",
+   "nodes": 134,
+   "pipelineVersion": "pg-2+8bb1ad7d"
   },
   {
    "asset": "grc_tlg0011_tlg002",
    "slug": "grc-tlg0011-tlg002",
    "label": "Antigona — Sofoklés",
    "sourceLanguage": "grc",
-   "nodes": 17,
-   "pipelineVersion": "pg-1+c1eca8fa"
+   "nodes": 66,
+   "pipelineVersion": "pg-2+e3c0ddd6"
   },
   {
    "asset": "grc_tlg0001_tlg001",
@@ -79,31 +167,39 @@
    "label": "Argonautika — Apollónios Rhodský",
    "sourceLanguage": "grc",
    "nodes": 5,
-   "pipelineVersion": "pg-1+d0f41883"
+   "pipelineVersion": "pg-2+2af88a66"
   },
   {
    "asset": "grc_tlg0006_tlg017",
    "slug": "grc-tlg0006-tlg017",
    "label": "Bakchantky — Eurípidés",
    "sourceLanguage": "grc",
-   "nodes": 14,
-   "pipelineVersion": "pg-1+f64e3c6d"
+   "nodes": 70,
+   "pipelineVersion": "pg-2+603dcb6a"
   },
   {
    "asset": "lat_phi0472_phi001",
    "slug": "lat-phi0472-phi001",
    "label": "Básně (Carmina) — Catullus",
    "sourceLanguage": "lat",
-   "nodes": 4,
-   "pipelineVersion": "pg-1+aaf5c214"
+   "nodes": 82,
+   "pipelineVersion": "pg-2+e5475739"
   },
   {
    "asset": "lat_phi0631_phi001",
    "slug": "lat-phi0631-phi001",
    "label": "Catilinovo spiknutí — Sallustius",
    "sourceLanguage": "lat",
-   "nodes": 61,
-   "pipelineVersion": "pg-1+fb7ad9ac"
+   "nodes": 95,
+   "pipelineVersion": "pg-2+86d9c569"
+  },
+  {
+   "asset": "pi_dn_silakkhandhavagga",
+   "slug": "pi-dn-silakkhandhavagga",
+   "label": "Dígha-nikája — Oddíl o mravnosti",
+   "sourceLanguage": "pi",
+   "nodes": 14,
+   "pipelineVersion": "pg-2+020cbfd4"
   },
   {
    "asset": "grc_tlg0003_tlg001",
@@ -111,7 +207,7 @@
    "label": "Dějiny peloponéské války — Thúkýdidés",
    "sourceLanguage": "grc",
    "nodes": 9,
-   "pipelineVersion": "pg-1+ff1bc9a4"
+   "pipelineVersion": "pg-2+f0009cda"
   },
   {
    "asset": "grc_tlg0016_tlg001",
@@ -119,7 +215,7 @@
    "label": "Dějiny — Hérodotos",
    "sourceLanguage": "grc",
    "nodes": 10,
-   "pipelineVersion": "pg-1+a9f0a875"
+   "pipelineVersion": "pg-2+9a97bfaf"
   },
   {
    "asset": "grc_tlg0086_tlg010",
@@ -127,71 +223,71 @@
    "label": "Etika Níkomachova — Aristotelés",
    "sourceLanguage": "grc",
    "nodes": 11,
-   "pipelineVersion": "pg-1+5f224269"
+   "pipelineVersion": "pg-2+9616c386"
   },
   {
    "asset": "grc_tlg0059_tlg001",
    "slug": "grc-tlg0059-tlg001",
    "label": "Euthyfrón — Platón",
    "sourceLanguage": "grc",
-   "nodes": 16,
-   "pipelineVersion": "pg-1+174699aa"
+   "nodes": 50,
+   "pipelineVersion": "pg-2+98e2f32f"
   },
   {
    "asset": "grc_tlg0031_tlg004",
    "slug": "grc-tlg0031-tlg004",
    "label": "Evangelium podle Jana",
    "sourceLanguage": "grc",
-   "nodes": 22,
-   "pipelineVersion": "pg-1+fc3990e0"
+   "nodes": 116,
+   "pipelineVersion": "pg-2+9c8f77f3"
   },
   {
    "asset": "grc_tlg0031_tlg003",
    "slug": "grc-tlg0031-tlg003",
    "label": "Evangelium podle Lukáše",
    "sourceLanguage": "grc",
-   "nodes": 25,
-   "pipelineVersion": "pg-1+bfa128db"
+   "nodes": 149,
+   "pipelineVersion": "pg-2+a990d69f"
   },
   {
    "asset": "grc_tlg0031_tlg002",
    "slug": "grc-tlg0031-tlg002",
    "label": "Evangelium podle Marka",
    "sourceLanguage": "grc",
-   "nodes": 17,
-   "pipelineVersion": "pg-1+a3109651"
+   "nodes": 90,
+   "pipelineVersion": "pg-2+aac4903a"
   },
   {
    "asset": "grc_tlg0031_tlg001",
    "slug": "grc-tlg0031-tlg001",
    "label": "Evangelium podle Matouše",
    "sourceLanguage": "grc",
-   "nodes": 29,
-   "pipelineVersion": "pg-1+de3a434b"
+   "nodes": 148,
+   "pipelineVersion": "pg-2+c6a9059e"
   },
   {
    "asset": "grc_tlg0059_tlg012",
    "slug": "grc-tlg0059-tlg012",
    "label": "Faidros — Platón",
    "sourceLanguage": "grc",
-   "nodes": 54,
-   "pipelineVersion": "pg-1+e46b9918"
+   "nodes": 161,
+   "pipelineVersion": "pg-2+55b30150"
   },
   {
    "asset": "grc_tlg0059_tlg004",
    "slug": "grc-tlg0059-tlg004",
    "label": "Faidón — Platón",
    "sourceLanguage": "grc",
-   "nodes": 63,
-   "pipelineVersion": "pg-1+ee5b2754"
+   "nodes": 197,
+   "pipelineVersion": "pg-2+5000edae"
   },
   {
    "asset": "lat_phi1351_phi002",
    "slug": "lat-phi1351-phi002",
    "label": "Germánie — Tacitus",
    "sourceLanguage": "lat",
-   "nodes": 47,
-   "pipelineVersion": "pg-1+4513a07d"
+   "nodes": 57,
+   "pipelineVersion": "pg-2+0948b19e"
   },
   {
    "asset": "grc_tlg0059_tlg023",
@@ -199,7 +295,7 @@
    "label": "Gorgias — Platón",
    "sourceLanguage": "grc",
    "nodes": 82,
-   "pipelineVersion": "pg-1+7fd2ac86"
+   "pipelineVersion": "pg-2+d1c97a31"
   },
   {
    "asset": "de_hegel_werke03",
@@ -207,7 +303,7 @@
    "label": "Hegel — Fenomenologie ducha (Werke 3)",
    "sourceLanguage": "de",
    "nodes": 32,
-   "pipelineVersion": "pg-1+5c4f8d94"
+   "pipelineVersion": "pg-2+2ba2a0f2"
   },
   {
    "asset": "de_hegel_werke05",
@@ -215,23 +311,23 @@
    "label": "Hegel — Věda o logice (Werke 5)",
    "sourceLanguage": "de",
    "nodes": 16,
-   "pipelineVersion": "pg-1+892459d0"
+   "pipelineVersion": "pg-2+5f5e2cac"
   },
   {
    "asset": "grc_tlg0006_tlg005",
    "slug": "grc-tlg0006-tlg005",
    "label": "Hippolytos — Eurípidés",
    "sourceLanguage": "grc",
-   "nodes": 12,
-   "pipelineVersion": "pg-1+6c5a962c"
+   "nodes": 65,
+   "pipelineVersion": "pg-2+0ed9134d"
   },
   {
    "asset": "zh_lunyu",
    "slug": "zh-lunyu",
    "label": "Hovory (Lun-jü) — Konfucius",
    "sourceLanguage": "lzh",
-   "nodes": 21,
-   "pipelineVersion": "pg-1+2de8d71c"
+   "nodes": 78,
+   "pipelineVersion": "pg-2+aae333c8"
   },
   {
    "asset": "grc_tlg0562_tlg001",
@@ -239,23 +335,39 @@
    "label": "Hovory k sobě — Marcus Aurelius",
    "sourceLanguage": "grc",
    "nodes": 13,
-   "pipelineVersion": "pg-1+1a377b9e"
+   "pipelineVersion": "pg-2+6f20de8d"
+  },
+  {
+   "asset": "pi_kn_buddhavamsa",
+   "slug": "pi-kn-buddhavamsa",
+   "label": "Khuddaka-nikája — Buddhavansa (rodokmen buddhů)",
+   "sourceLanguage": "pi",
+   "nodes": 113,
+   "pipelineVersion": "pg-2+e0c8ab83"
+  },
+  {
+   "asset": "pi_kn_cariyapitaka",
+   "slug": "pi-kn-cariyapitaka",
+   "label": "Khuddaka-nikája — Čarijápitaka (koš chování)",
+   "sourceLanguage": "pi",
+   "nodes": 46,
+   "pipelineVersion": "pg-2+08a77469"
   },
   {
    "asset": "grc_tlg0059_tlg003",
    "slug": "grc-tlg0059-tlg003",
    "label": "Kritón — Platón",
    "sourceLanguage": "grc",
-   "nodes": 13,
-   "pipelineVersion": "pg-1+237009c5"
+   "nodes": 41,
+   "pipelineVersion": "pg-2+d62d8ee2"
   },
   {
    "asset": "grc_tlg0011_tlg004",
    "slug": "grc-tlg0011-tlg004",
    "label": "Král Oidipús — Sofoklés",
    "sourceLanguage": "grc",
-   "nodes": 16,
-   "pipelineVersion": "pg-1+aa6aa6ff"
+   "nodes": 78,
+   "pipelineVersion": "pg-2+ad33d592"
   },
   {
    "asset": "lat_phi1351_phi005",
@@ -263,15 +375,15 @@
    "label": "Letopisy (Annales) — Tacitus",
    "sourceLanguage": "lat",
    "nodes": 14,
-   "pipelineVersion": "pg-1+debe49f4"
+   "pipelineVersion": "pg-2+49044644"
   },
   {
    "asset": "grc_tlg0031_tlg006",
    "slug": "grc-tlg0031-tlg006",
    "label": "List Římanům",
    "sourceLanguage": "grc",
-   "nodes": 17,
-   "pipelineVersion": "pg-1+98889208"
+   "nodes": 65,
+   "pipelineVersion": "pg-2+7aae35e5"
   },
   {
    "asset": "lat_phi1017_phi015",
@@ -279,23 +391,23 @@
    "label": "Listy Luciliovi — Seneca",
    "sourceLanguage": "lat",
    "nodes": 18,
-   "pipelineVersion": "pg-1+00f1f250"
+   "pipelineVersion": "pg-2+f2681811"
   },
   {
    "asset": "grc_tlg0019_tlg007",
    "slug": "grc-tlg0019-tlg007",
    "label": "Lysistraté — Aristofanés",
    "sourceLanguage": "grc",
-   "nodes": 13,
-   "pipelineVersion": "pg-1+cf06e813"
+   "nodes": 70,
+   "pipelineVersion": "pg-2+f782304b"
   },
   {
    "asset": "grc_tlg0059_tlg024",
    "slug": "grc-tlg0059-tlg024",
    "label": "Menón — Platón",
    "sourceLanguage": "grc",
-   "nodes": 32,
-   "pipelineVersion": "pg-1+6548ba34"
+   "nodes": 91,
+   "pipelineVersion": "pg-2+a3d202b3"
   },
   {
    "asset": "grc_tlg0086_tlg025",
@@ -303,15 +415,15 @@
    "label": "Metafyzika — Aristotelés",
    "sourceLanguage": "grc",
    "nodes": 15,
-   "pipelineVersion": "pg-1+c33b3bd1"
+   "pipelineVersion": "pg-2+21e8e28d"
   },
   {
    "asset": "grc_tlg0006_tlg003",
    "slug": "grc-tlg0006-tlg003",
    "label": "Médeia — Eurípidés",
    "sourceLanguage": "grc",
-   "nodes": 14,
-   "pipelineVersion": "pg-1+b4bfefd3"
+   "nodes": 65,
+   "pipelineVersion": "pg-2+3f60266b"
   },
   {
    "asset": "lat_phi0474_phi055",
@@ -319,7 +431,7 @@
    "label": "O povinnostech (De officiis) — Cicero",
    "sourceLanguage": "lat",
    "nodes": 4,
-   "pipelineVersion": "pg-1+fbc748ac"
+   "pipelineVersion": "pg-2+c6d37c72"
   },
   {
    "asset": "lat_phi0474_phi050",
@@ -327,7 +439,7 @@
    "label": "O přirozenosti bohů — Cicero",
    "sourceLanguage": "lat",
    "nodes": 4,
-   "pipelineVersion": "pg-1+3ebb10fa"
+   "pipelineVersion": "pg-2+c3e95256"
   },
   {
    "asset": "lat_phi0474_phi052",
@@ -335,7 +447,7 @@
    "label": "O přátelství (Laelius) — Cicero",
    "sourceLanguage": "lat",
    "nodes": 105,
-   "pipelineVersion": "pg-1+a6badd08"
+   "pipelineVersion": "pg-2+7facf315"
   },
   {
    "asset": "lat_phi0550_phi001",
@@ -343,47 +455,47 @@
    "label": "O přírodě (De rerum natura) — Lucretius",
    "sourceLanguage": "lat",
    "nodes": 7,
-   "pipelineVersion": "pg-1+470a8631"
+   "pipelineVersion": "pg-2+bcf5c0e6"
   },
   {
    "asset": "lat_phi0474_phi043",
    "slug": "lat-phi0474-phi043",
    "label": "O státě (De re publica) — Cicero",
    "sourceLanguage": "lat",
-   "nodes": 10,
-   "pipelineVersion": "pg-1+c7155911"
+   "nodes": 141,
+   "pipelineVersion": "pg-2+288fa167"
   },
   {
    "asset": "lat_phi0474_phi051",
    "slug": "lat-phi0474-phi051",
    "label": "O stáří (Cato maior) — Cicero",
    "sourceLanguage": "lat",
-   "nodes": 86,
-   "pipelineVersion": "pg-1+e0e0319f"
+   "nodes": 88,
+   "pipelineVersion": "pg-2+723e4e45"
   },
   {
    "asset": "grc_tlg0019_tlg003",
    "slug": "grc-tlg0019-tlg003",
    "label": "Oblaka — Aristofanés",
    "sourceLanguage": "grc",
-   "nodes": 16,
-   "pipelineVersion": "pg-1+69591bfa"
+   "nodes": 86,
+   "pipelineVersion": "pg-2+7618698c"
   },
   {
    "asset": "grc_tlg0059_tlg002",
    "slug": "grc-tlg0059-tlg002",
    "label": "Obrana Sókratova — Platón",
    "sourceLanguage": "grc",
-   "nodes": 27,
-   "pipelineVersion": "pg-1+2265e791"
+   "nodes": 82,
+   "pipelineVersion": "pg-2+dd4f4470"
   },
   {
    "asset": "grc_tlg0085_tlg006",
    "slug": "grc-tlg0085-tlg006",
    "label": "Oběť na hrobě (Choéfory) — Aischylos",
    "sourceLanguage": "grc",
-   "nodes": 12,
-   "pipelineVersion": "pg-1+8807ac81"
+   "nodes": 51,
+   "pipelineVersion": "pg-2+c3639dbf"
   },
   {
    "asset": "grc_tlg0012_tlg002",
@@ -391,39 +503,39 @@
    "label": "Odysseia — Homér",
    "sourceLanguage": "grc",
    "nodes": 25,
-   "pipelineVersion": "pg-1+9787a70f"
+   "pipelineVersion": "pg-2+0a681141"
   },
   {
    "asset": "grc_tlg0011_tlg007",
    "slug": "grc-tlg0011-tlg007",
    "label": "Oidipús na Kolónu — Sofoklés",
    "sourceLanguage": "grc",
-   "nodes": 18,
-   "pipelineVersion": "pg-1+1c838a37"
+   "nodes": 87,
+   "pipelineVersion": "pg-2+4da5ef90"
   },
   {
    "asset": "grc_tlg0059_tlg009",
    "slug": "grc-tlg0059-tlg009",
    "label": "Parmenidés — Platón",
    "sourceLanguage": "grc",
-   "nodes": 42,
-   "pipelineVersion": "pg-1+266884c9"
+   "nodes": 126,
+   "pipelineVersion": "pg-2+28a31553"
   },
   {
    "asset": "grc_tlg0085_tlg002",
    "slug": "grc-tlg0085-tlg002",
    "label": "Peršané — Aischylos",
    "sourceLanguage": "grc",
-   "nodes": 15,
-   "pipelineVersion": "pg-1+22de5eb4"
+   "nodes": 52,
+   "pipelineVersion": "pg-2+40c17083"
   },
   {
    "asset": "grc_tlg0086_tlg034",
    "slug": "grc-tlg0086-tlg034",
    "label": "Poetika — Aristotelés",
    "sourceLanguage": "grc",
-   "nodes": 27,
-   "pipelineVersion": "pg-1+e7a02adf"
+   "nodes": 90,
+   "pipelineVersion": "pg-2+38935b84"
   },
   {
    "asset": "grc_tlg0086_tlg035",
@@ -431,7 +543,7 @@
    "label": "Politika — Aristotelés",
    "sourceLanguage": "grc",
    "nodes": 9,
-   "pipelineVersion": "pg-1+541ad9af"
+   "pipelineVersion": "pg-2+e42aaa7e"
   },
   {
    "asset": "lat_phi0959_phi006",
@@ -439,23 +551,23 @@
    "label": "Proměny (Metamorphoses) — Ovidius",
    "sourceLanguage": "lat",
    "nodes": 16,
-   "pipelineVersion": "pg-1+14efb555"
+   "pipelineVersion": "pg-2+7f292771"
   },
   {
    "asset": "grc_tlg0059_tlg022",
    "slug": "grc-tlg0059-tlg022",
    "label": "Prótagoras — Platón",
    "sourceLanguage": "grc",
-   "nodes": 55,
-   "pipelineVersion": "pg-1+062c89a3"
+   "nodes": 164,
+   "pipelineVersion": "pg-2+9c79b2cb"
   },
   {
    "asset": "grc_tlg0019_tlg006",
    "slug": "grc-tlg0019-tlg006",
    "label": "Ptáci — Aristofanés",
    "sourceLanguage": "grc",
-   "nodes": 18,
-   "pipelineVersion": "pg-1+a66373f9"
+   "nodes": 92,
+   "pipelineVersion": "pg-2+81a40a63"
   },
   {
    "asset": "grc_tlg0557_tlg001",
@@ -463,7 +575,7 @@
    "label": "Rozpravy — Epiktétos",
    "sourceLanguage": "grc",
    "nodes": 6,
-   "pipelineVersion": "pg-1+ded94af5"
+   "pipelineVersion": "pg-2+0d8897fa"
   },
   {
    "asset": "grc_tlg0086_tlg038",
@@ -471,31 +583,31 @@
    "label": "Rétorika — Aristotelés",
    "sourceLanguage": "grc",
    "nodes": 4,
-   "pipelineVersion": "pg-1+cd1d5502"
+   "pipelineVersion": "pg-2+618ff7af"
   },
   {
    "asset": "grc_tlg0031_tlg005",
    "slug": "grc-tlg0031-tlg005",
    "label": "Skutky apoštolů",
    "sourceLanguage": "grc",
-   "nodes": 29,
-   "pipelineVersion": "pg-1+c6b348d6"
+   "nodes": 148,
+   "pipelineVersion": "pg-2+d08f9c78"
   },
   {
    "asset": "grc_tlg0059_tlg007",
    "slug": "grc-tlg0059-tlg007",
    "label": "Sofistés — Platón",
    "sourceLanguage": "grc",
-   "nodes": 54,
-   "pipelineVersion": "pg-1+377eae56"
+   "nodes": 164,
+   "pipelineVersion": "pg-2+b32168cd"
   },
   {
    "asset": "grc_tlg0059_tlg011",
    "slug": "grc-tlg0059-tlg011",
    "label": "Symposion — Platón",
    "sourceLanguage": "grc",
-   "nodes": 53,
-   "pipelineVersion": "pg-1+d0fa428d"
+   "nodes": 157,
+   "pipelineVersion": "pg-2+44ccf614"
   },
   {
    "asset": "zh_daodejing",
@@ -503,47 +615,47 @@
    "label": "Tao te ťing — Lao-c'",
    "sourceLanguage": "lzh",
    "nodes": 82,
-   "pipelineVersion": "pg-1+0baf1f7a"
+   "pipelineVersion": "pg-2+5c4d994b"
   },
   {
    "asset": "grc_tlg0059_tlg006",
    "slug": "grc-tlg0059-tlg006",
    "label": "Theaitétos — Platón",
    "sourceLanguage": "grc",
-   "nodes": 70,
-   "pipelineVersion": "pg-1+f7d29e10"
+   "nodes": 216,
+   "pipelineVersion": "pg-2+fa620987"
   },
   {
    "asset": "grc_tlg0006_tlg011",
    "slug": "grc-tlg0006-tlg011",
    "label": "Trójanky — Eurípidés",
    "sourceLanguage": "grc",
-   "nodes": 10,
-   "pipelineVersion": "pg-1+c42b7f28"
+   "nodes": 59,
+   "pipelineVersion": "pg-2+449d2b3b"
   },
   {
    "asset": "grc_tlg0059_tlg031",
    "slug": "grc-tlg0059-tlg031",
    "label": "Tímaios — Platón",
    "sourceLanguage": "grc",
-   "nodes": 77,
-   "pipelineVersion": "pg-1+9647c599"
+   "nodes": 229,
+   "pipelineVersion": "pg-2+523fda24"
   },
   {
    "asset": "grc_tlg0085_tlg003",
    "slug": "grc-tlg0085-tlg003",
    "label": "Upoutaný Prométheus — Aischylos",
    "sourceLanguage": "grc",
-   "nodes": 12,
-   "pipelineVersion": "pg-1+9beb0343"
+   "nodes": 49,
+   "pipelineVersion": "pg-2+6413d19b"
   },
   {
    "asset": "grc_tlg0085_tlg007",
    "slug": "grc-tlg0085-tlg007",
    "label": "Usmířené Lítice (Eumenidy) — Aischylos",
    "sourceLanguage": "grc",
-   "nodes": 13,
-   "pipelineVersion": "pg-1+10bce5d3"
+   "nodes": 49,
+   "pipelineVersion": "pg-2+3ebfa1db"
   },
   {
    "asset": "grc_tlg0032_tlg002",
@@ -551,31 +663,31 @@
    "label": "Vzpomínky na Sókrata — Xenofón",
    "sourceLanguage": "grc",
    "nodes": 5,
-   "pipelineVersion": "pg-1+32d0f44d"
+   "pipelineVersion": "pg-2+80ef4bd1"
   },
   {
    "asset": "grc_tlg0031_tlg027",
    "slug": "grc-tlg0031-tlg027",
    "label": "Zjevení Janovo (Apokalypsa)",
    "sourceLanguage": "grc",
-   "nodes": 23,
-   "pipelineVersion": "pg-1+2ab02f8d"
+   "nodes": 87,
+   "pipelineVersion": "pg-2+b0e42895"
   },
   {
    "asset": "lat_phi0690_phi001",
    "slug": "lat-phi0690-phi001",
    "label": "Zpěvy pastýřské (Bucolica) — Vergilius",
    "sourceLanguage": "lat",
-   "nodes": 11,
-   "pipelineVersion": "pg-1+e5306f7c"
+   "nodes": 48,
+   "pipelineVersion": "pg-2+4ce65f66"
   },
   {
    "asset": "lat_phi0690_phi002",
    "slug": "lat-phi0690-phi002",
    "label": "Zpěvy rolnické (Georgica) — Vergilius",
    "sourceLanguage": "lat",
-   "nodes": 5,
-   "pipelineVersion": "pg-1+b6733349"
+   "nodes": 94,
+   "pipelineVersion": "pg-2+957115ac"
   },
   {
    "asset": "grc_tlg0059_tlg034",
@@ -583,7 +695,7 @@
    "label": "Zákony — Platón",
    "sourceLanguage": "grc",
    "nodes": 13,
-   "pipelineVersion": "pg-1+2a0eb829"
+   "pipelineVersion": "pg-2+f6c98904"
   },
   {
    "asset": "lat_phi0448_phi001",
@@ -591,15 +703,15 @@
    "label": "Zápisky o válce galské — Caesar",
    "sourceLanguage": "lat",
    "nodes": 9,
-   "pipelineVersion": "pg-1+a0dda8cc"
+   "pipelineVersion": "pg-2+c676f7fe"
   },
   {
    "asset": "grc_tlg0011_tlg005",
    "slug": "grc-tlg0011-tlg005",
    "label": "Élektra — Sofoklés",
    "sourceLanguage": "grc",
-   "nodes": 14,
-   "pipelineVersion": "pg-1+21c079c1"
+   "nodes": 68,
+   "pipelineVersion": "pg-2+157fedd9"
   },
   {
    "asset": "grc_tlg0012_tlg001",
@@ -607,15 +719,15 @@
    "label": "Ílias — Homér",
    "sourceLanguage": "grc",
    "nodes": 25,
-   "pipelineVersion": "pg-1+0338e84c"
+   "pipelineVersion": "pg-2+41295c51"
   },
   {
    "asset": "lat_phi0893_phi001",
    "slug": "lat-phi0893-phi001",
    "label": "Ódy (Carmina) — Horatius",
    "sourceLanguage": "lat",
-   "nodes": 5,
-   "pipelineVersion": "pg-1+41fb5f2c"
+   "nodes": 88,
+   "pipelineVersion": "pg-2+f00fc74d"
   },
   {
    "asset": "grc_tlg0059_tlg030",
@@ -623,7 +735,7 @@
    "label": "Ústava — Platón",
    "sourceLanguage": "grc",
    "nodes": 11,
-   "pipelineVersion": "pg-1+12d022d5"
+   "pipelineVersion": "pg-2+d55e59f2"
   },
   {
    "asset": "grc_tlg0004_tlg001",
@@ -631,15 +743,15 @@
    "label": "Životy slavných filosofů — Diogenés Laertios",
    "sourceLanguage": "grc",
    "nodes": 11,
-   "pipelineVersion": "pg-1+a794fb44"
+   "pipelineVersion": "pg-2+0bd4abcf"
   },
   {
    "asset": "grc_tlg0019_tlg009",
    "slug": "grc-tlg0019-tlg009",
    "label": "Žáby — Aristofanés",
    "sourceLanguage": "grc",
-   "nodes": 13,
-   "pipelineVersion": "pg-1+8858dbb9"
+   "nodes": 77,
+   "pipelineVersion": "pg-2+03ae665f"
   }
  ]
 }

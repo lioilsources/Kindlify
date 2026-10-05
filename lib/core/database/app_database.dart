@@ -26,6 +26,10 @@ class Nodes extends Table {
   IntColumn get byteStart => integer().withDefault(const Constant(0))();
   IntColumn get byteEnd => integer().withDefault(const Constant(0))();
   IntColumn get depth => integer().withDefault(const Constant(0))();
+  // Original-language text of the node (bundle `texts`); null for books
+  // exported without it. Leaves carry their passage, childless chapters
+  // the whole chapter.
+  TextColumn get originalText => text().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};
@@ -56,7 +60,14 @@ class AppDatabase extends _$AppDatabase {
     : super(executor ?? driftDatabase(name: 'kindlify'));
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+        onUpgrade: (m, from, to) async {
+          if (from < 2) await m.addColumn(nodes, nodes.originalText);
+        },
+      );
 
   // --- Books ---
 
@@ -87,6 +98,30 @@ class AppDatabase extends _$AppDatabase {
 
   Future<void> insertNode(NodesCompanion node) =>
       into(nodes).insertOnConflictUpdate(node);
+
+  /// Original text for the reading mode: the node's own text, otherwise its
+  /// children's texts in order (a chapter whose passages are leaves).
+  Future<String> originalTextFor(String nodeId) async {
+    final node = await nodeById(nodeId);
+    if (node == null) return '';
+    if ((node.originalText ?? '').isNotEmpty) return node.originalText!;
+    final children = await childrenOf(nodeId)
+      ..sort((a, b) => a.id.compareTo(b.id));
+    return children
+        .map((c) => c.originalText ?? '')
+        .where((t) => t.isNotEmpty)
+        .join('\n\n');
+  }
+
+  /// Whether any node of the book carries original text.
+  Future<bool> bookHasOriginalText(String bookSlug) async {
+    final row = await (select(nodes)
+          ..where(
+              (n) => n.bookSlug.equals(bookSlug) & n.originalText.isNotNull())
+          ..limit(1))
+        .getSingleOrNull();
+    return row != null;
+  }
 
   // --- Terms ---
 

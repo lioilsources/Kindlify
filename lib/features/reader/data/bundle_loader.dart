@@ -72,7 +72,7 @@ class BundleLoader {
     );
 
     // Walk the tree and insert nodes recursively.
-    await _insertNode(manifest.tree, slug, null, 0, nodeKey);
+    await _insertNode(manifest.tree, slug, null, 0, nodeKey, bundle.texts);
 
     // Insert terms.
     for (final entry in bundle.words.nodes.entries) {
@@ -110,6 +110,7 @@ class BundleLoader {
     String? parentId,
     int depth,
     String Function(String) nodeKey,
+    Map<String, String> texts,
   ) async {
     await _db.insertNode(
       NodesCompanion.insert(
@@ -121,10 +122,12 @@ class BundleLoader {
         byteStart: Value(node.byteStart),
         byteEnd: Value(node.byteEnd),
         depth: Value(depth),
+        originalText: Value(texts[node.id]),
       ),
     );
     for (final child in node.children) {
-      await _insertNode(child, bookSlug, nodeKey(node.id), depth + 1, nodeKey);
+      await _insertNode(
+          child, bookSlug, nodeKey(node.id), depth + 1, nodeKey, texts);
     }
   }
 

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/database/app_database.dart';
 import '../data/bundle_loader.dart';
+import '../domain/original_text.dart';
 import '../domain/reader_notifier.dart';
 import 'panels/nav_panel.dart';
 import 'panels/summary_panel.dart';
@@ -47,6 +48,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
       appBar: AppBar(
         title: _BookTitle(bookSlug: widget.bookSlug),
         actions: [
+          _OriginalToggle(bookSlug: widget.bookSlug),
           if (state.selectedWords.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.filter_alt_off),
@@ -145,6 +147,27 @@ class _FilterChips extends ConsumerWidget {
             )
             .toList(),
       ),
+    );
+  }
+}
+
+/// Souhrn ↔ originál. Shown only for books exported with original text.
+class _OriginalToggle extends ConsumerWidget {
+  const _OriginalToggle({required this.bookSlug});
+
+  final String bookSlug;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hasText =
+        ref.watch(bookHasOriginalTextProvider(bookSlug)).value ?? false;
+    if (!hasText) return const SizedBox.shrink();
+    final showOriginal = ref.watch(showOriginalProvider(bookSlug));
+    return IconButton(
+      icon: Icon(showOriginal ? Icons.notes : Icons.menu_book_outlined),
+      tooltip: showOriginal ? 'Souhrn' : 'Originál',
+      onPressed: () => ref.read(showOriginalProvider(bookSlug).notifier).state =
+          !showOriginal,
     );
   }
 }

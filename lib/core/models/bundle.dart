@@ -8,6 +8,7 @@ class BookBundle {
     required this.manifest,
     required this.words,
     required this.summaries,
+    this.texts = const {},
   });
 
   final BookManifest manifest;
@@ -15,6 +16,10 @@ class BookBundle {
 
   /// summaries[nodeId][locale] = summary text
   final Map<String, Map<String, String>> summaries;
+
+  /// texts[nodeId] = original-language text. Optional: bundles from the
+  /// library carry it for shorter works (WorldLibraryProject export, pg-2).
+  final Map<String, String> texts;
 
   factory BookBundle.fromJson(Map<String, dynamic> json) {
     final manifest = BookManifest.fromJson(
@@ -28,6 +33,13 @@ class BookBundle {
       );
       return MapEntry(nodeId, localeMap);
     });
-    return BookBundle(manifest: manifest, words: words, summaries: summaries);
+    final rawTexts = json['texts'] as Map<String, dynamic>? ?? const {};
+    final texts = rawTexts.map((id, text) => MapEntry(id, text as String));
+    return BookBundle(
+      manifest: manifest,
+      words: words,
+      summaries: summaries,
+      texts: texts,
+    );
   }
 }

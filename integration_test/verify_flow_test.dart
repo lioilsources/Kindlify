@@ -313,5 +313,49 @@ void main() {
       description: 'exported bundle shows Czech chapter headings',
     );
     debugPrint('STEP exported zh-daodejing readable (cloud + Czech chapters)');
+
+    // --- Reading mode on the Greek New Testament: chapter → original text,
+    // then a verse passage (leaf) with its Czech gloss.
+    const mark = 'Načíst Evangelium podle Marka';
+    await tester.pageBack();
+    await tester.pump(const Duration(milliseconds: 500));
+    await pumpUntil(tester, () => find.text(mark).evaluate().isNotEmpty,
+        description: 'library lists Mark');
+    await tester.scrollUntilVisible(find.text(mark), 300,
+        scrollable: find.byType(Scrollable).first);
+    await tester.pump(const Duration(milliseconds: 300));
+    await tester.tap(find.text(mark));
+    await tester.pump(const Duration(milliseconds: 500));
+    final chapter1 = find.textContaining('Začátek Ježíšovy služby');
+    await pumpUntil(tester, () => chapter1.evaluate().isNotEmpty,
+        timeout: const Duration(seconds: 60), description: 'Mark chapter chips');
+    await tester.tap(chapter1.first);
+    await tester.pump(const Duration(milliseconds: 600));
+    await pumpUntil(tester, () => summaryContains(tester, 'Jan'),
+        description: 'Mark 1 long summary');
+    final toggle = find.byTooltip('Originál');
+    await pumpUntil(tester, () => toggle.evaluate().isNotEmpty,
+        description: 'reading-mode toggle offered for a book with text');
+    await tester.tap(toggle);
+    await tester.pump(const Duration(milliseconds: 600));
+    bool originalShows(String needle) => find
+        .byType(SelectableText)
+        .evaluate()
+        .any((e) => ((e.widget as SelectableText).data ?? '').contains(needle));
+    await pumpUntil(tester, () => originalShows('ΑΡΧΗ τοῦ εὐαγγελίου'),
+        description: 'Greek text of Mark 1');
+    debugPrint('STEP reading mode shows Greek original of Mark 1');
+    final leaf = find.text('1,1–12');
+    await pumpUntil(tester, () => leaf.evaluate().isNotEmpty,
+        description: 'verse passage chip 1,1–12');
+    await tester.tap(leaf.first);
+    await tester.pump(const Duration(milliseconds: 600));
+    await pumpUntil(tester, () => originalShows('ΑΡΧΗ') && !originalShows('Καφαρναούμ'),
+        description: 'passage text only (not the whole chapter)');
+    await tester.tap(find.byTooltip('Souhrn'));
+    await tester.pump(const Duration(milliseconds: 600));
+    await pumpUntil(tester, () => summaryContains(tester, 'Úryvek'),
+        description: 'passage gloss as summary');
+    debugPrint('STEP verse passage 1,1–12: Greek text + Czech gloss');
   });
 }

@@ -1,0 +1,11 @@
+A Kindlify nemlineáris olvasó ókori és klasszikus szövegekhez.
+
+Ahelyett, hogy oldalról oldalra olvasnál, a mű szerkezete és gondolatai mentén haladsz:
+• Navigációs sáv könyvekkel, fejezetekkel és szakaszokkal
+• A kulcsfogalmak szófelhője — válassz szavakat, és csak az azokat tartalmazó részek maradnak
+• Összefoglalók a mű minden részéhez, a kapcsolódó szakaszokra mutató linkekkel
+• Olvasási mód az eredeti szöveggel
+
+A könyvtárban megtalálható többek között a Tao Te King, Konfuciusz Beszélgetései, görög és latin klasszikusok és még sok más.
+
+Megjegyzés: a könyvcímek, az összefoglalók és a szövegek egyelőre csehül és az eredeti nyelveken érhetők el; az alkalmazás felülete 45 nyelven használható.

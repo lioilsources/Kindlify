@@ -1,0 +1,11 @@
+Kindlify er en ikke-lineær læser til antikke og klassiske tekster.
+
+I stedet for at læse side efter side bevæger du dig gennem værket efter dets opbygning og idéer:
+• Navigationsbjælke med bøger, kapitler og passager
+• Ordsky med nøglebegreber — vælg ord for at filtrere de afsnit, der indeholder dem
+• Resuméer af hver del af værket med links direkte til relaterede passager
+• Læsetilstand med originalteksten
+
+Biblioteket rummer værker som Tao Te King, Konfutses samtaler, græske og latinske klassikere og meget mere.
+
+Bemærk: bogtitler, resuméer og tekster er indtil videre på tjekkisk og på originalsprogene; appens brugerflade findes på 45 sprog.

@@ -1,0 +1,11 @@
+Kindlify on epälineaarinen lukija antiikin ja klassisille teksteille.
+
+Sivu sivulta lukemisen sijaan liikut teoksessa sen rakenteen ja ajatusten mukaan:
+• Navigointipalkki kirjoineen, lukuineen ja kohtineen
+• Avaintermien sanapilvi — valitse sanoja ja näet vain osiot, joissa ne esiintyvät
+• Tiivistelmät teoksen jokaisesta osasta ja linkit suoraan liittyviin kohtiin
+• Lukutila alkutekstillä
+
+Kirjastossa on teoksia kuten Tao Te Ching, Kungfutsen keskustelut, kreikkalaisia ja latinalaisia klassikoita ja paljon muuta.
+
+Huom.: kirjojen nimet, tiivistelmät ja tekstit ovat toistaiseksi tšekiksi ja alkuperäiskielillä; sovelluksen käyttöliittymä on saatavilla 45 kielellä.

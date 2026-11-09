@@ -1,0 +1,11 @@
+Kindlify je nelinearni čitač drevnih i klasičnih tekstova.
+
+Umjesto čitanja stranicu po stranicu, krećete se kroz djelo prema njegovoj strukturi i idejama:
+• Navigacijska traka s knjigama, poglavljima i odlomcima
+• Oblak ključnih pojmova — odaberite riječi i filtrirajte odjeljke koji ih sadrže
+• Sažeci svakog dijela djela s poveznicama izravno na povezane odlomke
+• Način čitanja s izvornim tekstom
+
+Knjižnica sadrži djela poput Tao Te Chinga, Konfucijevih Razgovora, grčkih i latinskih klasika i drugih.
+
+Napomena: naslovi knjiga, sažeci i tekstovi zasad su na češkom i na izvornim jezicima; sučelje aplikacije dostupno je na 45 jezika.

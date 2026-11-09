@@ -1,0 +1,11 @@
+Kindlify je nelinearni bralnik za antična in klasična besedila.
+
+Namesto branja stran za stranjo se po delu premikate glede na njegovo zgradbo in ideje:
+• Navigacijska vrstica s knjigami, poglavji in odlomki
+• Oblak ključnih izrazov — izberite besede in prikažejo se le razdelki, ki jih vsebujejo
+• Povzetki vsakega dela s povezavami, ki vodijo naravnost do povezanih odlomkov
+• Način branja z izvirnim besedilom
+
+V knjižnici so dela, kot so Tao Te King, Konfucijevi Pogovori, grška in latinska klasika in še več.
+
+Opomba: naslovi knjig, povzetki in besedila so zaenkrat v češčini in v izvirnih jezikih; vmesnik aplikacije je na voljo v 45 jezikih.

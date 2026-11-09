@@ -1,0 +1,11 @@
+Kindlify ialah pembaca bukan linear untuk teks purba dan klasik.
+
+Daripada membaca halaman demi halaman, anda bergerak dalam karya mengikut struktur dan ideanya:
+• Bar navigasi dengan buku, bab dan petikan
+• Awan istilah utama — pilih perkataan untuk menapis bahagian yang mengandunginya
+• Ringkasan setiap bahagian karya, dengan pautan terus ke petikan berkaitan
+• Mod bacaan dengan teks asal
+
+Pustaka merangkumi karya seperti Tao Te Ching, Analek Konfusius, karya klasik Yunani dan Latin, dan banyak lagi.
+
+Nota: tajuk buku, ringkasan dan teks buat masa ini dalam bahasa Czech dan bahasa asal; antara muka aplikasi tersedia dalam 45 bahasa.

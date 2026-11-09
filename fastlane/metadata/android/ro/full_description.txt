@@ -1,0 +1,11 @@
+Kindlify este un cititor nelinear pentru texte antice și clasice.
+
+În loc să citești pagină cu pagină, te miști prin operă după structura și ideile ei:
+• Bară de navigare cu cărți, capitole și pasaje
+• Nor de termeni-cheie — alege cuvinte pentru a filtra secțiunile care le conțin
+• Rezumate pentru fiecare parte a operei, cu linkuri direct către pasajele înrudite
+• Mod de citire cu textul original
+
+Biblioteca include opere precum Tao Te Ching, Analectele lui Confucius, clasici greci și latini și multe altele.
+
+Notă: titlurile, rezumatele și textele sunt deocamdată în cehă și în limbile originale; interfața aplicației este disponibilă în 45 de limbi.

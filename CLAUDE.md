@@ -47,4 +47,6 @@ Non-linear navigation: readers can jump between cross-references, annotations, a
 
 ## Localization
 
-`l10n/` present — app supports multiple UI languages.
+- UI: gen-l10n, `lib/l10n/app_*.arb` (45 languages, template `app_en.arb`, English fallback). Generated Dart is committed — run `flutter gen-l10n` after ARB changes. Book titles, summaries and texts are content (Czech + originals), never in ARB.
+- Store listings: `fastlane/metadata/{ios,android}/<locale>/` (no upload workflow — upload manually).
+- iOS signing team for local builds: `ios/Flutter/Team.xcconfig` (gitignored, see `.example`); CI uses `secrets.IOS_TEAM_ID`.

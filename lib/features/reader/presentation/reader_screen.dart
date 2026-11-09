@@ -9,6 +9,7 @@ import '../domain/reader_notifier.dart';
 import 'panels/nav_panel.dart';
 import 'panels/summary_panel.dart';
 import 'panels/word_cloud_panel.dart';
+import '../../../l10n/app_localizations.dart';
 
 class ReaderScreen extends ConsumerStatefulWidget {
   const ReaderScreen({super.key, required this.bookSlug});
@@ -52,13 +53,14 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
           if (state.selectedWords.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.filter_alt_off),
-              tooltip: 'Zrušit filtry',
+              tooltip: AppLocalizations.of(context).navClearFilters,
               onPressed: () => ref
                   .read(readerNotifierProvider(widget.bookSlug).notifier)
                   .clearWords(),
             ),
           IconButton(
             icon: const Icon(Icons.settings_outlined),
+            tooltip: AppLocalizations.of(context).settingsTitle,
             onPressed: () => context.push('/settings'),
           ),
         ],
@@ -136,7 +138,7 @@ class _FilterChips extends ConsumerWidget {
         children: state.selectedWords
             .map(
               (w) => Padding(
-                padding: const EdgeInsets.only(right: 4),
+                padding: const EdgeInsetsDirectional.only(end: 4),
                 child: InputChip(
                   label: Text(w, style: const TextStyle(fontSize: 11)),
                   onDeleted: () => notifier.toggleWord(w),
@@ -165,7 +167,9 @@ class _OriginalToggle extends ConsumerWidget {
     final showOriginal = ref.watch(showOriginalProvider(bookSlug));
     return IconButton(
       icon: Icon(showOriginal ? Icons.notes : Icons.menu_book_outlined),
-      tooltip: showOriginal ? 'Souhrn' : 'Originál',
+      tooltip: showOriginal
+          ? AppLocalizations.of(context).readerShowSummary
+          : AppLocalizations.of(context).readerShowOriginal,
       onPressed: () => ref.read(showOriginalProvider(bookSlug).notifier).state =
           !showOriginal,
     );

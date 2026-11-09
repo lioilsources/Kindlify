@@ -67,8 +67,8 @@ abstract class AppLocalizations {
 
   final String localeName;
 
-  static AppLocalizations? of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
   }
 
   static const LocalizationsDelegate<AppLocalizations> delegate =
@@ -199,6 +199,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pinch to zoom out'**
   String get readerZoomOutHint;
+
+  /// No description provided for @errorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {message}'**
+  String errorMessage(String message);
+
+  /// Button that imports a bundled book; {title} is the book title from the bundle (content, not translated).
+  ///
+  /// In en, this message translates to:
+  /// **'Load {title}'**
+  String libraryLoadBook(String title);
+
+  /// No description provided for @navClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get navClear;
+
+  /// Tooltip: switch the bottom panel back to the summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get readerShowSummary;
+
+  /// Tooltip: switch the bottom panel to the original text.
+  ///
+  /// In en, this message translates to:
+  /// **'Original'**
+  String get readerShowOriginal;
+
+  /// No description provided for @summaryPickBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a book to begin'**
+  String get summaryPickBook;
+
+  /// No description provided for @summaryUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary not available'**
+  String get summaryUnavailable;
+
+  /// No description provided for @originalTextMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'No original text for this passage — choose a chapter'**
+  String get originalTextMissing;
+
+  /// No description provided for @cloudNoTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'No terms'**
+  String get cloudNoTerms;
+
+  /// No description provided for @settingsServerSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Server'**
+  String get settingsServerSection;
+
+  /// Language of the book summaries (content), not of the UI.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary language'**
+  String get settingsSummaryLanguage;
 }
 
 class _AppLocalizationsDelegate

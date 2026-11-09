@@ -6,7 +6,9 @@
   "cloudMoreWords": "+{count} more",
   "@cloudMoreWords": {
     "placeholders": {
-      "count": { "type": "int" }
+      "count": {
+        "type": "int"
+      }
     }
   },
   "cloudSearchHint": "Search terms...",
@@ -21,5 +23,40 @@
   "settingsLocale": "Language",
   "settingsLocaleCs": "Czech",
   "settingsLocaleEn": "English",
-  "readerZoomOutHint": "Pinch to zoom out"
+  "readerZoomOutHint": "Pinch to zoom out",
+  "errorMessage": "Error: {message}",
+  "@errorMessage": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "libraryLoadBook": "Load {title}",
+  "@libraryLoadBook": {
+    "description": "Button that imports a bundled book; {title} is the book title from the bundle (content, not translated).",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "navClear": "Clear",
+  "readerShowSummary": "Summary",
+  "@readerShowSummary": {
+    "description": "Tooltip: switch the bottom panel back to the summary."
+  },
+  "readerShowOriginal": "Original",
+  "@readerShowOriginal": {
+    "description": "Tooltip: switch the bottom panel to the original text."
+  },
+  "summaryPickBook": "Select a book to begin",
+  "summaryUnavailable": "Summary not available",
+  "originalTextMissing": "No original text for this passage — choose a chapter",
+  "cloudNoTerms": "No terms",
+  "settingsServerSection": "Server",
+  "settingsSummaryLanguage": "Summary language",
+  "@settingsSummaryLanguage": {
+    "description": "Language of the book summaries (content), not of the UI."
+  }
 }

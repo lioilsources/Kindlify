@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/database/app_database.dart';
 import '../../domain/reader_notifier.dart';
 import '../../domain/reader_state.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class NavPanel extends ConsumerWidget {
   const NavPanel({super.key, required this.bookSlug});
@@ -35,7 +36,7 @@ class NavPanel extends ConsumerWidget {
             ),
             loading: () =>
                 const Center(child: CircularProgressIndicator(strokeWidth: 2)),
-            error: (e, _) => Text('Error: $e'),
+            error: (e, _) => Text(AppLocalizations.of(context).errorMessage('$e')),
           ),
         ),
       ],
@@ -134,7 +135,7 @@ class _SiblingList extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
               child: Text(
-                'Žádná sekce neobsahuje všechna vybraná slova',
+                AppLocalizations.of(context).navNoSections,
                 style: TextStyle(
                   fontSize: 12,
                   color: theme.colorScheme.onSurfaceVariant,
@@ -144,7 +145,10 @@ class _SiblingList extends StatelessWidget {
           ),
           TextButton(
             onPressed: onClearFilter,
-            child: const Text('Zrušit', style: TextStyle(fontSize: 12)),
+            child: Text(
+              AppLocalizations.of(context).navClear,
+              style: const TextStyle(fontSize: 12),
+            ),
           ),
         ],
       );
@@ -171,7 +175,7 @@ class _SiblingList extends StatelessWidget {
         return Opacity(
           opacity: matches ? 1.0 : 0.35,
           child: Padding(
-            padding: const EdgeInsets.only(right: 6),
+            padding: const EdgeInsetsDirectional.only(end: 6),
             child: ActionChip(
               label: Text(
                 node.label,

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/original_text.dart';
 import '../../domain/reader_notifier.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class SummaryPanel extends ConsumerWidget {
   const SummaryPanel({super.key, required this.bookSlug});
@@ -20,15 +21,15 @@ class SummaryPanel extends ConsumerWidget {
     return Stack(
       children: [
         if (state.isRagLoading)
-          const Positioned(
+          const PositionedDirectional(
             top: 8,
-            right: 8,
+            end: 8,
             child: _RagLoadingIndicator(),
           ),
         if (state.isRagActive && !state.isRagLoading)
-          const Positioned(
+          const PositionedDirectional(
             top: 8,
-            right: 8,
+            end: 8,
             child: _RagBadge(),
           ),
         AnimatedSwitcher(
@@ -66,7 +67,7 @@ class _SummaryContent extends StatelessWidget {
     if (isEmpty) {
       return Center(
         child: Text(
-          'Vyberte knihu pro začátek',
+          AppLocalizations.of(context).summaryPickBook,
           style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
         ),
       );
@@ -85,7 +86,7 @@ class _SummaryContent extends StatelessWidget {
     if (summary!.isEmpty) {
       return Center(
         child: Text(
-          'Souhrn není k dispozici',
+          AppLocalizations.of(context).summaryUnavailable,
           style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
         ),
       );
@@ -144,7 +145,7 @@ class _RagBadge extends StatelessWidget {
           Icon(Icons.auto_awesome, size: 11, color: theme.colorScheme.tertiary),
           const SizedBox(width: 3),
           Text(
-            'AI · živě',
+            AppLocalizations.of(context).summaryAiBadge,
             style: TextStyle(
               fontSize: 10,
               color: theme.colorScheme.tertiary,
@@ -190,11 +191,12 @@ class _OriginalText extends ConsumerWidget {
           color: theme.colorScheme.primary,
         ),
       ),
-      error: (e, _) => Center(child: Text('Chyba: $e')),
+      error: (e, _) =>
+          Center(child: Text(AppLocalizations.of(context).errorMessage('$e'))),
       data: (t) => t.isEmpty
           ? Center(
               child: Text(
-                'Text originálu u tohoto místa není — vyberte kapitolu',
+                AppLocalizations.of(context).originalTextMissing,
                 style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
               ),
             )

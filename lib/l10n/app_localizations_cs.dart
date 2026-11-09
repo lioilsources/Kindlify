@@ -61,4 +61,42 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get readerZoomOutHint => 'Přiblíž pro zoom-out';
+
+  @override
+  String errorMessage(String message) {
+    return 'Chyba: $message';
+  }
+
+  @override
+  String libraryLoadBook(String title) {
+    return 'Načíst $title';
+  }
+
+  @override
+  String get navClear => 'Zrušit';
+
+  @override
+  String get readerShowSummary => 'Souhrn';
+
+  @override
+  String get readerShowOriginal => 'Originál';
+
+  @override
+  String get summaryPickBook => 'Vyberte knihu pro začátek';
+
+  @override
+  String get summaryUnavailable => 'Souhrn není k dispozici';
+
+  @override
+  String get originalTextMissing =>
+      'Text originálu u tohoto místa není — vyberte kapitolu';
+
+  @override
+  String get cloudNoTerms => 'Žádné termíny';
+
+  @override
+  String get settingsServerSection => 'Server';
+
+  @override
+  String get settingsSummaryLanguage => 'Jazyk souhrnů';
 }

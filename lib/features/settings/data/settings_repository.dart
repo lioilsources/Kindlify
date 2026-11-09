@@ -4,11 +4,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SettingsRepository {
   static const _keyServerUrl = 'server_url';
   static const _keyLocale = 'locale';
-  static const _defaultServerUrl = 'http://192.168.1.100:8080';
+  // Override at build time: --dart-define=KINDLIFY_SERVER_URL=http://<host>:8080
+  static const defaultServerUrl = String.fromEnvironment(
+    'KINDLIFY_SERVER_URL',
+    defaultValue: 'http://localhost:8080',
+  );
 
   Future<String> getServerUrl() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getString(_keyServerUrl) ?? _defaultServerUrl;
+    return prefs.getString(_keyServerUrl) ?? defaultServerUrl;
   }
 
   Future<void> setServerUrl(String url) async {

@@ -1,0 +1,11 @@
+Kindlify je nelineárna čítačka starovekých a klasických textov.
+
+Namiesto čítania stranu po strane prechádzate dielo podľa jeho stavby a myšlienok:
+• Navigačná lišta s knihami, kapitolami a pasážami
+• Mrak kľúčových termínov — vyberte slová a zostanú len sekcie, ktoré ich obsahujú
+• Súhrny ku každej časti diela s odkazmi priamo na súvisiace pasáže
+• Režim čítania s originálnym textom
+
+V knižnici nájdete napríklad Tao te ťing, Konfuciove Rozhovory, grécku a latinskú klasiku a ďalšie.
+
+Poznámka: názvy kníh, súhrny a texty sú zatiaľ v češtine a v pôvodných jazykoch; rozhranie aplikácie je v 45 jazykoch.

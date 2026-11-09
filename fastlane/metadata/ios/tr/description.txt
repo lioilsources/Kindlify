@@ -1,0 +1,11 @@
+Kindlify, antik ve klasik metinler için doğrusal olmayan bir okuyucudur.
+
+Sayfa sayfa okumak yerine eserin yapısına ve fikirlerine göre ilerlersiniz:
+• Kitaplar, bölümler ve pasajlarla gezinme çubuğu
+• Anahtar terimlerden kelime bulutu — kelimeleri seçerek onları içeren bölümleri süzün
+• Eserin her bölümü için özetler ve ilgili pasajlara doğrudan giden bağlantılar
+• Orijinal metinle okuma modu
+
+Kitaplıkta Tao Te Ching, Konfüçyüs'ün Konuşmaları, Yunan ve Latin klasikleri ve daha fazlası var.
+
+Not: Kitap adları, özetler ve metinler şimdilik Çekçe ve özgün dillerde; uygulama arayüzü 45 dilde kullanılabilir.

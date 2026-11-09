@@ -61,4 +61,42 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get readerZoomOutHint => 'Pinch to zoom out';
+
+  @override
+  String errorMessage(String message) {
+    return 'Error: $message';
+  }
+
+  @override
+  String libraryLoadBook(String title) {
+    return 'Load $title';
+  }
+
+  @override
+  String get navClear => 'Clear';
+
+  @override
+  String get readerShowSummary => 'Summary';
+
+  @override
+  String get readerShowOriginal => 'Original';
+
+  @override
+  String get summaryPickBook => 'Select a book to begin';
+
+  @override
+  String get summaryUnavailable => 'Summary not available';
+
+  @override
+  String get originalTextMissing =>
+      'No original text for this passage — choose a chapter';
+
+  @override
+  String get cloudNoTerms => 'No terms';
+
+  @override
+  String get settingsServerSection => 'Server';
+
+  @override
+  String get settingsSummaryLanguage => 'Summary language';
 }

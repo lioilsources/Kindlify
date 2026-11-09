@@ -1,0 +1,1 @@
+antiguo,textos,clásicos,lector,filosofía,Tao,Confucio,Platón,Biblia,resumen,nube de palabras

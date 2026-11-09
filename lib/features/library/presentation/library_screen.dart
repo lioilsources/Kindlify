@@ -9,6 +9,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../core/database/app_database.dart';
 import '../../reader/data/bundle_loader.dart';
 import '../../reader/domain/reader_notifier.dart';
+import '../../../l10n/app_localizations.dart';
 
 part 'library_screen.g.dart';
 
@@ -55,7 +56,7 @@ class LibraryScreen extends ConsumerWidget {
     final booksAsync = ref.watch(localBooksProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Kindlify')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context).appTitle)),
       body: booksAsync.when(
         data: (books) {
           if (books.isEmpty) {
@@ -69,7 +70,8 @@ class LibraryScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => Center(child: Text('Chyba: $e')),
+        error: (e, _) =>
+            Center(child: Text(AppLocalizations.of(context).errorMessage('$e'))),
       ),
     );
   }
@@ -80,10 +82,11 @@ class LibraryScreen extends ConsumerWidget {
     String assetName,
   ) async {
     final messenger = ScaffoldMessenger.of(context);
+    final l10n = AppLocalizations.of(context);
 
     messenger.showSnackBar(
-      const SnackBar(
-        content: Text('Načítám ukázkovou knihu…'),
+      SnackBar(
+        content: Text(l10n.libraryLoading),
         duration: Duration(seconds: 10),
       ),
     );
@@ -96,7 +99,9 @@ class LibraryScreen extends ConsumerWidget {
       if (context.mounted) context.push('/reader/$slug');
     } catch (e) {
       messenger.hideCurrentSnackBar();
-      messenger.showSnackBar(SnackBar(content: Text('Chyba: $e')));
+      messenger.showSnackBar(
+        SnackBar(content: Text(l10n.errorMessage('$e'))),
+      );
     }
   }
 }
@@ -118,7 +123,7 @@ class _DemoButtons extends ConsumerWidget {
             child: OutlinedButton.icon(
               onPressed: () => onLoadDemo(asset),
               icon: const Icon(Icons.add),
-              label: Text('Načíst $label'),
+              label: Text(AppLocalizations.of(context).libraryLoadBook(label)),
             ),
           ),
       ],
@@ -148,7 +153,7 @@ class _EmptyLibrary extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'Žádné knihy',
+              AppLocalizations.of(context).libraryEmpty,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: Theme.of(context).colorScheme.onSurfaceVariant,
               ),

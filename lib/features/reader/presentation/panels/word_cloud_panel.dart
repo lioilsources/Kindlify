@@ -5,6 +5,7 @@ import '../../../../core/database/app_database.dart';
 import '../../domain/reader_notifier.dart';
 import '../../domain/reader_state.dart';
 import '../widgets/word_bubble.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class WordCloudPanel extends ConsumerStatefulWidget {
   const WordCloudPanel({super.key, required this.bookSlug});
@@ -46,7 +47,8 @@ class _WordCloudPanelState extends ConsumerState<WordCloudPanel> {
         loading: () => const Center(
           child: CircularProgressIndicator(strokeWidth: 2),
         ),
-        error: (e, _) => Center(child: Text('Error: $e')),
+        error: (e, _) =>
+            Center(child: Text(AppLocalizations.of(context).errorMessage('$e'))),
       ),
     );
   }
@@ -60,7 +62,7 @@ class _WordCloudPanelState extends ConsumerState<WordCloudPanel> {
     if (terms.isEmpty) {
       return Center(
         child: Text(
-          'Žádné termíny',
+          AppLocalizations.of(context).cloudNoTerms,
           style: TextStyle(
             color: Theme.of(context).colorScheme.onSurfaceVariant,
           ),
@@ -144,7 +146,7 @@ class _TermsBottomSheetState extends State<_TermsBottomSheet> {
             child: TextField(
               autofocus: false,
               decoration: InputDecoration(
-                hintText: 'Hledat termíny...',
+                hintText: AppLocalizations.of(context).cloudSearchHint,
                 prefixIcon: const Icon(Icons.search, size: 20),
                 isDense: true,
                 border: OutlineInputBorder(

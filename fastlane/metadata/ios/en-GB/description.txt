@@ -1,0 +1,11 @@
+Kindlify is a non-linear reader for ancient and classical texts.
+
+Instead of reading page after page, you move through a work by its structure and ideas:
+• Navigation bar with books, chapters and passages
+• Word cloud of key terms — pick words to filter the sections that contain them
+• Summaries for every part of the work, with links that jump straight to related passages
+• Reading mode with the original text
+
+The library includes works such as the Tao Te Ching, the Analects of Confucius, Greek and Latin classics and more.
+
+Note: book titles, summaries and texts are currently in Czech and in the original languages; the app interface is available in 45 languages.

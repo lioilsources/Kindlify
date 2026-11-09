@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../data/settings_repository.dart';
+import '../../../l10n/app_localizations.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
@@ -47,29 +48,30 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Nastavení')),
+      appBar: AppBar(title: Text(l10n.settingsTitle)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           Text(
-            'Server',
+            l10n.settingsServerSection,
             style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(height: 8),
           TextField(
             controller: _urlController,
-            decoration: const InputDecoration(
-              labelText: 'URL serveru',
-              hintText: 'http://192.168.1.100:8080',
-              border: OutlineInputBorder(),
+            decoration: InputDecoration(
+              labelText: l10n.settingsServerUrl,
+              hintText: SettingsRepository.defaultServerUrl,
+              border: const OutlineInputBorder(),
             ),
             onSubmitted: (v) =>
                 ref.read(settingsRepositoryProvider).setServerUrl(v),
           ),
           const SizedBox(height: 24),
           Text(
-            'Jazyk souhrnů',
+            l10n.settingsSummaryLanguage,
             style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(height: 8),

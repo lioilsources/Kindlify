@@ -1,0 +1,11 @@
+O Kindlify é um leitor não linear de textos antigos e clássicos.
+
+Em vez de ler página a página, percorre a obra pela sua estrutura e pelas suas ideias:
+• Barra de navegação com livros, capítulos e passagens
+• Nuvem de termos-chave — escolha palavras para filtrar as secções que as contêm
+• Resumos de cada parte da obra, com ligações que levam diretamente às passagens relacionadas
+• Modo de leitura com o texto original
+
+A biblioteca inclui obras como o Tao Te Ching, os Analectos de Confúcio, clássicos gregos e latinos e muito mais.
+
+Nota: os títulos, os resumos e os textos estão por agora em checo e nas línguas originais; a interface da app está disponível em 45 idiomas.

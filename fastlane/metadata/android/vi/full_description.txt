@@ -1,0 +1,11 @@
+Kindlify là trình đọc phi tuyến dành cho các văn bản cổ đại và kinh điển.
+
+Thay vì đọc từng trang, bạn di chuyển trong tác phẩm theo cấu trúc và ý tưởng của nó:
+• Thanh điều hướng với sách, chương và đoạn
+• Đám mây thuật ngữ chính — chọn từ để lọc các phần có chứa chúng
+• Tóm tắt cho mọi phần của tác phẩm, kèm liên kết dẫn thẳng đến các đoạn liên quan
+• Chế độ đọc với văn bản gốc
+
+Thư viện có các tác phẩm như Đạo Đức Kinh, Luận Ngữ của Khổng Tử, kinh điển Hy Lạp và La-tinh, và nhiều hơn nữa.
+
+Lưu ý: tên sách, bản tóm tắt và văn bản hiện chỉ có bằng tiếng Séc và ngôn ngữ gốc; giao diện ứng dụng có 45 ngôn ngữ.

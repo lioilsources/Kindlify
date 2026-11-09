@@ -1,0 +1,11 @@
+Kindlify è un lettore non lineare di testi antichi e classici.
+
+Invece di leggere pagina dopo pagina, ti muovi nell'opera seguendone la struttura e le idee:
+• Barra di navigazione con libri, capitoli e passi
+• Nuvola dei termini chiave: scegli le parole per filtrare le sezioni che le contengono
+• Riassunti di ogni parte dell'opera, con link che portano direttamente ai passi collegati
+• Modalità lettura con il testo originale
+
+La libreria comprende opere come il Tao Te Ching, i Dialoghi di Confucio, classici greci e latini e altro ancora.
+
+Nota: titoli, riassunti e testi sono per ora in ceco e nelle lingue originali; l'interfaccia dell'app è disponibile in 45 lingue.

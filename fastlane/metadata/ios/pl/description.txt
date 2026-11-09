@@ -1,0 +1,11 @@
+Kindlify to nieliniowy czytnik tekstów starożytnych i klasycznych.
+
+Zamiast czytać strona po stronie, poruszasz się po dziele według jego struktury i idei:
+• Pasek nawigacji z księgami, rozdziałami i fragmentami
+• Chmura kluczowych terminów — wybierz słowa, aby odfiltrować sekcje, które je zawierają
+• Streszczenia każdej części dzieła z linkami prowadzącymi wprost do powiązanych fragmentów
+• Tryb czytania z tekstem oryginału
+
+W bibliotece znajdziesz m.in. Tao Te Ching, Dialogi konfucjańskie, klasykę grecką i łacińską i wiele więcej.
+
+Uwaga: tytuły, streszczenia i teksty są na razie po czesku i w językach oryginału; interfejs aplikacji jest dostępny w 45 językach.

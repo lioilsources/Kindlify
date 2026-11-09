@@ -6,7 +6,9 @@
   "cloudMoreWords": "+{count} dalších",
   "@cloudMoreWords": {
     "placeholders": {
-      "count": { "type": "int" }
+      "count": {
+        "type": "int"
+      }
     }
   },
   "cloudSearchHint": "Hledat termíny...",
@@ -21,5 +23,16 @@
   "settingsLocale": "Jazyk",
   "settingsLocaleCs": "Čeština",
   "settingsLocaleEn": "Angličtina",
-  "readerZoomOutHint": "Přiblíž pro zoom-out"
+  "readerZoomOutHint": "Přiblíž pro zoom-out",
+  "errorMessage": "Chyba: {message}",
+  "libraryLoadBook": "Načíst {title}",
+  "navClear": "Zrušit",
+  "readerShowSummary": "Souhrn",
+  "readerShowOriginal": "Originál",
+  "summaryPickBook": "Vyberte knihu pro začátek",
+  "summaryUnavailable": "Souhrn není k dispozici",
+  "originalTextMissing": "Text originálu u tohoto místa není — vyberte kapitolu",
+  "cloudNoTerms": "Žádné termíny",
+  "settingsServerSection": "Server",
+  "settingsSummaryLanguage": "Jazyk souhrnů"
 }

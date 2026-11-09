@@ -8,7 +8,17 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:kindlify/features/reader/presentation/widgets/word_bubble.dart';
+import 'package:kindlify/l10n/app_localizations.dart';
 import 'package:kindlify/main.dart' as app;
+
+/// "Load <title>" button label in the UI language the app resolves for this
+/// machine — book titles are content (Czech), the button text is UI.
+String loadLabel(String title) => lookupAppLocalizations(
+      basicLocaleListResolution(
+        WidgetsBinding.instance.platformDispatcher.locales,
+        AppLocalizations.supportedLocales,
+      ),
+    ).libraryLoadBook(title);
 
 /// Pumps frames until [condition] is true (spinners keep animating, so
 /// pumpAndSettle cannot be used).
@@ -120,7 +130,7 @@ void main() {
       tester,
       () =>
           find.text('Tao Te Ťing (道德經)').evaluate().isNotEmpty ||
-          find.text('Načíst Tao Te Ťing').evaluate().isNotEmpty,
+          find.text(loadLabel('Tao Te Ťing')).evaluate().isNotEmpty,
       description: 'library shows Tao Te Ťing tile or demo button',
     );
     await shot('01-library');
@@ -130,7 +140,7 @@ void main() {
       await tester.tap(tile);
     } else {
       debugPrint('STEP library: empty, loading demo bundle');
-      await tester.tap(find.text('Načíst Tao Te Ťing'));
+      await tester.tap(find.text(loadLabel('Tao Te Ťing')));
     }
     await tester.pump(const Duration(milliseconds: 300));
 
@@ -254,11 +264,11 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
     await pumpUntil(
       tester,
-      () => find.text('Načíst Hovory (Konfucius)').evaluate().isNotEmpty,
+      () => find.text(loadLabel('Hovory (Konfucius)')).evaluate().isNotEmpty,
       description: 'library shows Analects demo button',
     );
-    await tester.ensureVisible(find.text('Načíst Hovory (Konfucius)'));
-    await tester.tap(find.text('Načíst Hovory (Konfucius)'));
+    await tester.ensureVisible(find.text(loadLabel('Hovory (Konfucius)')));
+    await tester.tap(find.text(loadLabel('Hovory (Konfucius)')));
     await tester.pump(const Duration(milliseconds: 500));
     await pumpUntil(
       tester,
@@ -276,7 +286,7 @@ void main() {
 
     // --- Back to library, load a bundle exported from the library corpus
     // (rag/kindlify_sync.py), listed via assets/bundles/index.json.
-    const exported = "Načíst Tao te ťing — Lao-c'";
+    final exported = loadLabel("Tao te ťing — Lao-c'");
     await tester.pageBack();
     await tester.pump(const Duration(milliseconds: 500));
     await pumpUntil(
@@ -316,7 +326,7 @@ void main() {
 
     // --- Reading mode on the Greek New Testament: chapter → original text,
     // then a verse passage (leaf) with its Czech gloss.
-    const mark = 'Načíst Evangelium podle Marka';
+    final mark = loadLabel('Evangelium podle Marka');
     await tester.pageBack();
     await tester.pump(const Duration(milliseconds: 500));
     await pumpUntil(tester, () => find.text(mark).evaluate().isNotEmpty,

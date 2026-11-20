@@ -21,6 +21,9 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
+          # Same Flutter as ci.yml: an unpinned stable pulled a Flutter that needs
+          # Gradle 9.3.1 and broke the v1.4.0 Android release.
+          flutter-version: '3.41.x'
           channel: stable
           cache: true
 
